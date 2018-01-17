@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CBA2k18</string>
+    <string name="title_activity_day_service">DayServiceActivity</string>
+    <string name="title_activity_sat_day_service">SatDayService</string>
 </resources>

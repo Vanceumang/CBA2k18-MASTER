@@ -3,32 +3,58 @@ package acbcmedia.com.Control_Page;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
+
+
+
+import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Tab1Fragment extends Fragment {
+
     private static final String TAG = "Tab1Fragment";
 
-    private Button btnTEST;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstances){
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment1_layout,container,false);
-        btnTEST = (Button) view.findViewById(R.id.btnTEST);
+        View view = inflater.inflate(R.layout.fragment1_layout, container, false);
+        String[] menuItems ={
+                "Praise and Worshp",
+                "Thuthannak:         Inteek",
+                "Bible zoh lo zuamawk:   CCBC, ACBC, FBCI, FCCI",
+                "Praise and Worshp",
+                "Thuthannak:         Inteek",
+                "Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI", "Thuthangtha:   Rev. Dr. Khaw Lian Uk",
+                "Bible zoh lo zuamawk:   CCBC, ACBC, FBCI, FCCI",
+                "Praise and Worshp",
+                "Thuthannak:         Inteek",
+                "Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI",
+                "Bible zoh lo zuamawk:   CCBC, ACBC, FBCI, FCCI",
+                "Praise and Worshp",
+                "Thuthannak:         Inteek",
+                "Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI","Bible zoh lo zuamawk:   CCBC, ACBC, FBCI, FCCI",
+                "Praise and Worshp",
+                "Thuthannak:         Inteek",
+                "Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI"};
+        ListView listView = (ListView) view.findViewById(R.id.mainMenu);
 
-        btnTEST.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "TESTING BUTTON CLICK 1",Toast.LENGTH_SHORT).show();
-            }
-        });
+        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
+                getActivity(), android.R.layout.simple_list_item_1,menuItems);
 
+        listView.setAdapter(listViewAdapter);
+
+
+
+        //onflate the layout for this fragment
         return view;
+
     }
 }

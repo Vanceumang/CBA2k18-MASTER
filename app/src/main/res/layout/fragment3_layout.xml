@@ -5,22 +5,24 @@
                 android:layout_height="match_parent"
     >
 
-    <Button
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnTEST"
-        android:text="TESTBTN 3"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        android:text="Tab2"
-        android:layout_marginTop="40dp"
+        android:textSize="15sp"
+        android:text="Welcome to the Bulletin Page! Please select your AM or PM service to view more detail schedule"
+        android:layout_marginTop="5dp"
         android:id="@+id/textTab3"
-        android:layout_below="@+id/btnTEST"/>
+        android:layout_below="@+id/DayService"/>
+
+    <Button
+        android:id="@+id/DayService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:text="Day Service" />
+
 
 </RelativeLayout>

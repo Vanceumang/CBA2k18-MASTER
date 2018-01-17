@@ -5,24 +5,30 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+
 /**
- * Created by User on 4/15/2017.
+ * Created by VC on 1/16/18.
  */
 
 public class ActivityThree extends AppCompatActivity {
+    //private static final String TAG = "ActivityThree";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
 
+
         TextView title = (TextView) findViewById(R.id.activityTitle3);
-        title.setText("This is ActivityThree");
+        title.setText("This is Activityfour");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
@@ -63,5 +69,6 @@ public class ActivityThree extends AppCompatActivity {
                 return false;
             }
         });
+
     }
 }

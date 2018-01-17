@@ -11,8 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.util.Log;
+import android.widget.ListView;
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
- * Created by User on 4/15/2017.
+ * Created by VC 1/13/18
  */
 
 public class ActivityOne extends AppCompatActivity {
@@ -24,9 +30,6 @@ public class ActivityOne extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
-
-        //TextView title = (TextView) findViewById(R.id.activityTitle1);
-        //title.setText("This is ActivityOne");
 
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 

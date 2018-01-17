@@ -20,12 +20,6 @@ public class SectionsPageAdapter extends FragmentPagerAdapter {
        // mFragmentTitle.add(title);
     }
 
-    /*
-    public void addFragment(Fragment fragment) {
-
-        mFragmentList.add(fragment);
-    }
-    */
     public SectionsPageAdapter(FragmentManager fm) {
         super(fm);
     }

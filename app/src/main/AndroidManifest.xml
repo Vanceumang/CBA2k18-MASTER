@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="acbcmedia.com.Control_Page">
+    package="acbcmedia.com.Control_Page">
 
     <application
         android:allowBackup="true"
@@ -9,17 +9,26 @@
         android:roundIcon="@mipmap/ic_cbana_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="acbcmedia.com.Control_Page.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="acbcmedia.com.Control_Page.ActivityOne"></activity>
-        <activity android:name="acbcmedia.com.Control_Page.ActivityTwo"></activity>
-        <activity android:name="acbcmedia.com.Control_Page.ActivityThree"></activity>
-        <activity android:name="acbcmedia.com.Control_Page.ActivityFour"></activity>
+        <activity android:name=".ActivityOne" />
+        <activity android:name=".ActivityTwo" />
+        <activity android:name=".ActivityThree" />
+        <activity android:name=".ActivityFour" />
+        <activity
+            android:name=".SatDayService"
+            android:label="@string/title_activity_sat_day_service"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
     </application>
 
 </manifest>

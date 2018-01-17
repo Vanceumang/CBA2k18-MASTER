@@ -22,20 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-     /*   mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        setupViewPager(mViewPager);
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
-
-
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_assignment);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_autorenew);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_attach_file);
-        */
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();

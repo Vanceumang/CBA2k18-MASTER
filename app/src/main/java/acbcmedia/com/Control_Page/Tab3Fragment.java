@@ -20,7 +20,7 @@ public class Tab3Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment3_layout,container,false);
-        btnTEST = (Button) view.findViewById(R.id.btnTEST);
+        btnTEST = (Button) view.findViewById(R.id.DayService);
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @Override
