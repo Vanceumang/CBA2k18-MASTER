@@ -21,8 +21,71 @@
         <activity android:name=".ActivityThree" />
         <activity android:name=".ActivityFour" />
         <activity
-            android:name=".SatDayService"
+            android:name=".Schedule.SatDayService"
             android:label="@string/title_activity_sat_day_service"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.SatLunchDinner"
+            android:label="@string/title_activity_sat_lunch_dinner"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.SatEvening"
+            android:label="@string/title_activity_sat_evening"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.SunDayService"
+            android:label="@string/title_activity_sun_day_service"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.SunLunchDinner"
+            android:label="@string/title_activity_sun_lunch_dinner"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.SunEvening"
+            android:label="@string/title_activity_sun_evening"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.FriDinner"
+            android:label="@string/title_activity_fri_dinner"
+            android:parentActivityName=".ActivityOne"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+        </activity>
+        <activity
+            android:name=".Schedule.FriEvening"
+            android:label="@string/title_activity_fri_evening"
             android:parentActivityName=".ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data

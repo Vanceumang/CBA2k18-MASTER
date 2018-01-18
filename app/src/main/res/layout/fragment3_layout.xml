@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-    >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Space
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="15sp"
-        android:text="Welcome to the Bulletin Page! Please select your AM or PM service to view more detail schedule"
-        android:layout_marginTop="5dp"
-        android:id="@+id/textTab3"
-        android:layout_below="@+id/DayService"/>
+        android:layout_width="wrap_content"/>
 
     <Button
-        android:id="@+id/DayService"
+        android:id="@+id/Sun_DayService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="122dp"
         android:text="Day Service" />
+    <Space
+        android:layout_weight=".5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
 
+    <Button
+        android:id="@+id/Sun_Lunch_Dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Lunch and Dinner" />
+    <Space
+        android:layout_weight=".5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/Sun_Evening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Evening Service" />
+    <Space
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+</LinearLayout>

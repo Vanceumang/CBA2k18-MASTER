@@ -10,6 +10,6 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
-        android:id="@+id/mainMenu"/>
+        android:id="@+id/listView"/>
 
 </RelativeLayout>

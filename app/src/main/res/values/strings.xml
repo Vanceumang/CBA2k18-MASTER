@@ -2,4 +2,12 @@
     <string name="app_name">CBA2k18</string>
     <string name="title_activity_day_service">DayServiceActivity</string>
     <string name="title_activity_sat_day_service">SatDayService</string>
+    <string name="title_activity_main2">SatLunchDinner</string>
+    <string name="title_activity_sat_lunch_dinner">SatLunchDinner</string>
+    <string name="title_activity_sat_evening">SatEvening</string>
+    <string name="title_activity_sun_day_service">SunDayService</string>
+    <string name="title_activity_sun_lunch_dinner">SunLunchDinner</string>
+    <string name="title_activity_sun_evening">SunEvening</string>
+    <string name="title_activity_fri_dinner">FriDinner</string>
+    <string name="title_activity_fri_evening">FriEvening</string>
 </resources>

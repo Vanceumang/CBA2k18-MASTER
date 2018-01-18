@@ -11,10 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import android.util.Log;
-import android.widget.ListView;
-import java.util.ArrayList;
-import java.util.List;
+import acbcmedia.com.Control_Page.Schedule.Tab1Fragment;
+import acbcmedia.com.Control_Page.Schedule.Tab2Fragment;
+import acbcmedia.com.Control_Page.Schedule.Tab3Fragment;
 
 
 /**
