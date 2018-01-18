@@ -51,7 +51,7 @@ public class Tab3Fragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.Sun_Evening:
                 // launch Activity
-                Intent intent2 = new Intent(getActivity(), SunLunchDinner.class);
+                Intent intent2 = new Intent(getActivity(), SunEvening.class);
                 startActivity(intent2);
                 break;
 

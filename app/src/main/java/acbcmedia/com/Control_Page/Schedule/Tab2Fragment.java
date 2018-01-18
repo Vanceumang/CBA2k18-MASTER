@@ -41,7 +41,7 @@ public class Tab2Fragment extends Fragment implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.DayService:
                 // launch Activity
-                Intent intent = new Intent(getActivity(), SatLunchDinner.class);
+                Intent intent = new Intent(getActivity(), SatDayService.class);
                 startActivity(intent);
                 break;
             case R.id.Lunch_Dinner:

@@ -29,7 +29,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
         // Three buttons are call here
         Button DayService = (Button) view.findViewById(R.id.Fri_Dinner);
         DayService.setOnClickListener(this);
-        Button Lunch_Dinner = (Button) view.findViewById(R.id.FriEvening);
+        Button Lunch_Dinner = (Button) view.findViewById(R.id.Fri_Evening);
         Lunch_Dinner.setOnClickListener(this);
 
         return view;
@@ -42,7 +42,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
                 Intent intent = new Intent(getActivity(), FriDinner.class);
                 startActivity(intent);
                 break;
-            case R.id.FriEvening:
+            case R.id.Fri_Evening:
                 // launch Activity
                 Intent intent1 = new Intent(getActivity(), FriEvening.class);
                 startActivity(intent1);
