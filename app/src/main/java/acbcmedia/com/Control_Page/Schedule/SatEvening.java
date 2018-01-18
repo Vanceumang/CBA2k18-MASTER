@@ -23,13 +23,13 @@ public class SatEvening extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fridaydinner);
+        setContentView(R.layout.activity_sat_evening);
 
-        ListView list = (ListView) findViewById(R.id.theList);
+        ListView list = (ListView) findViewById(R.id.satEvening);
         Log.d(TAG, "onCreate: Started.");
 
         ArrayList<String> names = new ArrayList<>();
-        names.add("Praise and Worshp Team");
+        names.add("SATURDAY NIGHT PROGRAM");
         names.add("Thuthannak:         Inteek");
         names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
         names.add("Bible Zohlo Zuamawk  CCBC, ACBC, FBCI, FCCI, CCBC");
@@ -45,7 +45,7 @@ public class SatEvening extends AppCompatActivity {
         names.add("Thuthannak:         Inteek");
 
 
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout, names);
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.content_sat_evening, names);
         list.setAdapter(adapter);
 
 
