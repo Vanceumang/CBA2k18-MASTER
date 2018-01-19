@@ -21,8 +21,8 @@ public class ActivityTwo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle2);
-        title.setText("This is ActivityTwo");
+       // TextView title = (TextView) findViewById(R.id.activityTitle2);
+       // title.setText("This is ActivityTwo");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

@@ -37,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tabs"
-                    android:background="@drawable/white_grey_border_bottom">
+                    android:background="@color/topfirst">
 
 
                 </android.support.design.widget.TabLayout>
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/bottomNavView_Bar"
-                android:background="@drawable/white_grey_border_top"
+                android:background="@color/topsecond"
                 app:menu="@menu/bottom_navigation_menu">
 
             </android.support.design.widget.BottomNavigationView>
