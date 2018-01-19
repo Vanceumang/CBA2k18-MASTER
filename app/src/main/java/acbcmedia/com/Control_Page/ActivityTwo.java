@@ -6,23 +6,41 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 /**
- * Created by User on 4/15/2017.
+Created by VC
  */
 
-public class ActivityTwo extends AppCompatActivity {
+public class ActivityTwo extends AppCompatActivity implements View.OnClickListener{
+
+    private CardView hruaitu, mino, nubu, ce, guests;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
 
-       // TextView title = (TextView) findViewById(R.id.activityTitle2);
-       // title.setText("This is ActivityTwo");
+        //Defining each Tabs(Hruaitu, Mino, Nubu, CE and Guests)
+        hruaitu = (CardView) findViewById(R.id.Upa);
+        mino = (CardView) findViewById(R.id.Mino);
+        nubu = (CardView) findViewById(R.id.Nubu);
+        ce = (CardView) findViewById(R.id.CE);
+        guests = (CardView) findViewById(R.id.Guest);
+
+        //Add Click listener to the tabs
+        hruaitu.setOnClickListener(this);
+        mino.setOnClickListener(this);
+        nubu.setOnClickListener(this);
+        ce.setOnClickListener(this);
+        guests.setOnClickListener(this);
+
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
@@ -63,6 +81,39 @@ public class ActivityTwo extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent i;
+
+        switch (view.getId()){
+            case R.id.Upa:
+                i = new Intent(this,CBA_Upa.class);
+                startActivity(i);
+                break;
+            case R.id.Mino:
+                i = new Intent(this,CBA_Mino.class);
+                startActivity(i);
+                break;
+            case R.id.Nubu:
+                i = new Intent(this,CBA_Nubu.class);
+                startActivity(i);
+                break;
+            case R.id.CE:
+                i = new Intent(this,CBA_Ce.class);
+                startActivity(i);
+                break;
+            case R.id.Guest:
+                i = new Intent(this,CBA_Guests.class);
+                startActivity(i);
+                break;
+                default:break;
+
+
+        }
+
+
     }
 
 }

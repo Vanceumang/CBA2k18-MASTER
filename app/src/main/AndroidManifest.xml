@@ -92,6 +92,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="acbcmedia.com.Control_Page.ActivityOne" />
         </activity>
+        <activity android:name=".CBA_Upa" />
+        <activity android:name=".CBA_Mino" />
+        <activity android:name=".CBA_Nubu" />
+        <activity android:name=".CBA_Ce" />
+        <activity android:name=".CBA_Guests"></activity>
     </application>
 
 </manifest>
