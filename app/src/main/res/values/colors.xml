@@ -15,7 +15,13 @@
     <color name="pink">#fe104d</color>
     <color name="black_overlay">#66000000</color>
     <color name="lightblue">#03A9F4</color>
-    <color name="topfirst">#00B0FF</color>
-    <color name="topsecond">#00B0FF</color>
+    <color name="topfirst">#81D4FA</color>
+    <color name="topsecond">#81D4FA</color>
+    <color name="lime">#CDDC39</color>
+    <color name="black">#000000</color>
+    <color name="lightblue50">#E1F5FE</color>
+    <color name="purple600">#8E24AA</color>
+    <color name="grey200">#EEEEEE</color>
+
 
 </resources>
