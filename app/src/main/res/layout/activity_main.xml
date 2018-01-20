@@ -15,7 +15,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/topBar">
+            android:id="@+id/topBar"
+            android:background="@color/topfirst">
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -26,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tabs"
-                    android:background="@color/topfirst">
+                    android:background="@color/colorPrimaryDark">
 
 
 
@@ -63,7 +64,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/bottomNavView_Bar"
-                android:background="@color/topsecond"
                 app:menu="@menu/bottom_navigation_menu">
 
             </android.support.design.widget.BottomNavigationView>
