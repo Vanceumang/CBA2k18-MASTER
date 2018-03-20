@@ -16,27 +16,20 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/topBar"
-            android:background="@color/topfirst">>
+            android:background="@color/colorPrimaryDark">>
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-
-
             </android.support.design.widget.AppBarLayout>
 
         </RelativeLayout>
-
-
-
 
         <RelativeLayout
             android:layout_below="@+id/topBar"
             android:layout_above="@+id/bottomBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="match_parent"
@@ -44,13 +37,38 @@
                 android:layout_marginTop="80dp"
                 android:textSize="30sp"
                 android:id="@+id/activityTitle4"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="Contacts"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:id="@+id/contacts" >
+            </ListView>
+        <!--    <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:id="@+id/browserLocation"
+                android:text="Go"/>
+            />
+            -->
 
         </RelativeLayout>
-
-
-
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -62,27 +80,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/bottomNavView_Bar"
-                app:menu="@menu/bottom_navigation_menu">
-
-
+                app:menu="@menu/bottom_navigation_menu"
+                app:itemIconTint="@color/nav_item_colors"
+                app:itemTextColor="@color/nav_item_colors"
+                app:itemBackground="@color/colorPrimaryDark">>
             </android.support.design.widget.BottomNavigationView>
         </RelativeLayout>
-
-
-
     </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </android.support.design.widget.CoordinatorLayout>

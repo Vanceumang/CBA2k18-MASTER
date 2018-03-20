@@ -22,6 +22,7 @@
     <color name="lightblue50">#E1F5FE</color>
     <color name="purple600">#8E24AA</color>
     <color name="grey200">#EEEEEE</color>
-
+    <color name = "White" > #ffffff</color>
+    <color name ="transparent" > #80ffffff</color>
 
 </resources>

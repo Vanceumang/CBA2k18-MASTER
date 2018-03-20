@@ -349,13 +349,10 @@
                             android:padding="5dp"
                             android:text="Rev. Dr. Khaw Lian Uk"
                             android:textColor="@android:color/black" />
-
                     </LinearLayout>
+
                 </android.support.v7.widget.CardView>
-
             </LinearLayout>
-
-
         </RelativeLayout>
 
     </RelativeLayout>

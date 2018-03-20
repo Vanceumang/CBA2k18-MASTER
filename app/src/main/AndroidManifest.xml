@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="acbcmedia.com.Control_Page">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_cbana_round"
@@ -16,10 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityOne" />
-        <activity android:name=".ActivityTwo" />
-        <activity android:name=".ActivityThree" />
-        <activity android:name=".ActivityFour" />
+        <activity
+            android:name=".ActivityOne"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityThree"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityFour"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Schedule.SatDayService"
             android:label="@string/title_activity_sat_day_service"
@@ -96,7 +106,13 @@
         <activity android:name=".Leaderships.CBA_Mino" />
         <activity android:name=".Leaderships.CBA_Nubu" />
         <activity android:name=".Leaderships.CBA_Ce" />
-        <activity android:name=".Leaderships.CBA_Guests"></activity>
+        <activity android:name=".Leaderships.CBA_Guests" />
+        <activity android:name=".Testing" />
+        <activity android:name=".Contacts.Contact1" />
+        <activity android:name=".Contacts.Contact2" />
+        <activity android:name=".Contacts.Contact3" />
+        <activity android:name=".Contacts.Contact4" />
+        <activity android:name=".Contacts.Contact5"></activity>
     </application>
 
 </manifest>

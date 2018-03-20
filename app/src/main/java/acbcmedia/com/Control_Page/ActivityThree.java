@@ -7,11 +7,16 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -19,16 +24,54 @@ import android.widget.TextView;
  */
 
 public class ActivityThree extends AppCompatActivity {
-    //private static final String TAG = "ActivityThree";
+    private static final String TAG = "ActivityThree";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
 
+        // Three buttons are call here
+       /* Button foodBTN = (Button) findViewById(R.id.browser);
+        foodBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // Log.d(TAG, "onClick: Clicked btnNavToSecond.");
 
-        TextView title = (TextView) findViewById(R.id.activityTitle3);
-        title.setText("This is Activity Three");
+                Intent intent = new Intent(ActivityThree.this, Testing.class);
+                startActivity(intent);
+
+            }
+        });
+        */
+        ListView list = (ListView) findViewById(R.id.theList);
+
+
+        Log.d(TAG, "onCreate: Started.");
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Recommeded Food Places");
+        names.add("Recommended Places to Visit");
+        names.add("Hotels Nearby");
+        names.add("Atlanta Chin Baptist Church");
+
+
+
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout, names);
+        list.setAdapter(adapter);
+
+
+/*
+        Button button = (Button) findViewById(R.id.browser);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("http://www.google.com"));
+                startActivity(intent);
+            }
+        }); */
+
+        //TextView title = (TextView) findViewById(R.id.activityTitle3);
+        //title.setText("This is Activity Three");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
@@ -56,7 +99,6 @@ public class ActivityThree extends AppCompatActivity {
                         break;
 
                     case R.id.ic_history:
-
                         break;
 
                     case R.id.ic_location:
@@ -65,10 +107,10 @@ public class ActivityThree extends AppCompatActivity {
                         break;
                 }
 
-
                 return false;
             }
         });
 
     }
+
 }
