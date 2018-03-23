@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_cbana_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Tabs.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,88 +19,88 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityOne"
+            android:name=".Tabs.ActivityOne"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityTwo"
+            android:name=".Tabs.ActivityTwo"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityThree"
+            android:name=".Tabs.ActivityThree"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActivityFour"
+            android:name=".Tabs.ActivityFour"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Schedule.SatDayService"
             android:label="@string/title_activity_sat_day_service"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.SatLunchDinner"
             android:label="@string/title_activity_sat_lunch_dinner"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.SatEvening"
             android:label="@string/title_activity_sat_evening"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.SunDayService"
             android:label="@string/title_activity_sun_day_service"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.SunLunchDinner"
             android:label="@string/title_activity_sun_lunch_dinner"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.SunEvening"
             android:label="@string/title_activity_sun_evening"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.FriDinner"
             android:label="@string/title_activity_fri_dinner"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity
             android:name=".Schedule.FriEvening"
             android:label="@string/title_activity_fri_evening"
-            android:parentActivityName=".ActivityOne"
+            android:parentActivityName=".Tabs.ActivityOne"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.ActivityOne" />
+                android:value="acbcmedia.com.Control_Page.Tabs.ActivityOne" />
         </activity>
         <activity android:name=".Leaderships.CBA_Upa" />
         <activity android:name=".Leaderships.CBA_Mino" />
@@ -108,11 +108,26 @@
         <activity android:name=".Leaderships.CBA_Ce" />
         <activity android:name=".Leaderships.CBA_Guests" />
         <activity android:name=".Testing" />
-        <activity android:name=".Contacts.Contact1" />
-        <activity android:name=".Contacts.Contact2" />
-        <activity android:name=".Contacts.Contact3" />
-        <activity android:name=".Contacts.Contact4" />
-        <activity android:name=".Contacts.Contact5"></activity>
+        <activity
+            android:name=".Contacts.Contact1"
+            android:parentActivityName=".Tabs.ActivityFour" />
+        <activity
+            android:name=".Contacts.Contact2"
+            android:parentActivityName=".Tabs.ActivityFour" />
+        <activity
+            android:name=".Contacts.Contact3"
+            android:parentActivityName=".Tabs.ActivityFour" />
+        <activity
+            android:name=".Contacts.Contact4"
+            android:parentActivityName=".Tabs.ActivityFour" />
+        <activity
+            android:name=".Contacts.Contact5"
+            android:parentActivityName=".Tabs.ActivityFour" />
+        <activity android:name=".Locations.Location1" />
+        <activity android:name=".Locations.Location2" />
+        <activity android:name=".Locations.Location3" />
+        <activity android:name=".Locations.Location4" />
+        <activity android:name=".Locations.Location5"></activity>
     </application>
 
 </manifest>

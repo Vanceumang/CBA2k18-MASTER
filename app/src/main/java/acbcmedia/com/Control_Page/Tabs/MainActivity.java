@@ -1,6 +1,7 @@
 package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
@@ -8,6 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.R;
@@ -21,10 +28,21 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ImageView locate = (ImageView) findViewById(R.id.location);
+        locate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.google.com/maps/dir/''/infinite+energy+forum/@33.9895659,-84.1637424,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88f5bd49d678ee55:0x5f1aa689ef9a04f6!2m2!1d-84.0937023!2d33.9895857"));
+                startActivity(intent);
+            }
+        });
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

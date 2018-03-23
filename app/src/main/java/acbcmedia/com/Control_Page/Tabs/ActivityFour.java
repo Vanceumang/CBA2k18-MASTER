@@ -1,36 +1,32 @@
-package acbcmedia.com.Control_Page;
+package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.util.ArrayList;
-
+import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.Contacts.Contact1;
 import acbcmedia.com.Control_Page.Contacts.Contact2;
+import acbcmedia.com.Control_Page.Contacts.Contact3;
+import acbcmedia.com.Control_Page.Contacts.Contact4;
+import acbcmedia.com.Control_Page.Contacts.Contact5;
+import acbcmedia.com.Control_Page.R;
 
-/**
- * Created by User on 4/15/2017.
- */
 
 public class ActivityFour extends AppCompatActivity {
 
     //declaration of Items for the listView
-    String items[] = new String [] { "Hotel", "Transportation", "Food", "CBANA Youth", "ACBC Media",""};
-
+    String items[] = new String [] {"", "", "", "", "",""};
+//"Hotel", "Transportation", "Food", "CBANA Youth", "ACBC Media"
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,20 +63,17 @@ public class ActivityFour extends AppCompatActivity {
                     startActivityForResult(myIntent,1);
                 }
                 if(position == 2){
-                    Intent myIntent = new Intent(view.getContext(), Contact1.class);
+                    Intent myIntent = new Intent(view.getContext(), Contact3.class);
                     startActivityForResult(myIntent,2);
                 }
                 if(position == 3){
-                    Intent myIntent = new Intent(view.getContext(), Contact1.class);
+                    Intent myIntent = new Intent(view.getContext(), Contact4.class);
                     startActivityForResult(myIntent,3);
                 }
                 if(position == 4){
-                    Intent myIntent = new Intent(view.getContext(), Contact1.class);
+                    Intent myIntent = new Intent(view.getContext(), Contact5.class);
                     startActivityForResult(myIntent,4);
                 }
-
-
-
 
 
             }

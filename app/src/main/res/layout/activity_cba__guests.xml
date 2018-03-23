@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="acbcmedia.com.Control_Page.MainActivity">
+    tools:context="acbcmedia.com.Control_Page.Tabs.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

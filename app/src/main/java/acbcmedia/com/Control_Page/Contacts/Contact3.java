@@ -11,5 +11,10 @@ public class Contact3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact3);
+
+        //getSupportActionBar().setTitle("Contact3");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 }

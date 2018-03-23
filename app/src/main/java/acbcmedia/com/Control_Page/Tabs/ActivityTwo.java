@@ -1,4 +1,4 @@
-package acbcmedia.com.Control_Page;
+package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Ce;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Guests;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Mino;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Nubu;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Upa;
+import acbcmedia.com.Control_Page.R;
 
 /**
 Created by VC

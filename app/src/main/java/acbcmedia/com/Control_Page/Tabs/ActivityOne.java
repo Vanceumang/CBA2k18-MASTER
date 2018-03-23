@@ -1,4 +1,4 @@
-package acbcmedia.com.Control_Page;
+package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
+import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.Schedule.Tab1Fragment;
 import acbcmedia.com.Control_Page.Schedule.Tab2Fragment;
 import acbcmedia.com.Control_Page.Schedule.Tab3Fragment;
+import acbcmedia.com.Control_Page.SectionsPageAdapter;
 
 
 /**

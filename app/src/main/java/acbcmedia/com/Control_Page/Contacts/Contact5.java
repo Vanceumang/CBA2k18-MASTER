@@ -10,5 +10,10 @@ public class Contact5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact5);
+
+        //  getSupportActionBar().setTitle("Contact1");
+       // getSupportActionBar().setDisplayShowHomeEnabled(true);
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }

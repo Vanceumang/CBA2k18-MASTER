@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="acbcmedia.com.Control_Page.MainActivity">
+    tools:context="acbcmedia.com.Control_Page.Tabs.MainActivity">
 
 
     <RelativeLayout
@@ -29,7 +29,8 @@
             android:layout_below="@+id/topBar"
             android:layout_above="@+id/bottomBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/White">
 
             <TextView
                 android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                 android:layout_marginTop="80dp"
                 android:textSize="30sp"
                 android:id="@+id/activityTitle4"
-                android:textAlignment="center" />
+                android:textAlignment="textStart" />
 
             <TextView
                 android:id="@+id/main"
@@ -56,19 +57,89 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="110dp"
+
                 android:id="@+id/contacts" >
             </ListView>
-        <!--    <Button
-                android:layout_width="wrap_content"
+
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:id="@+id/browserLocation"
-                android:text="Go"/>
-            />
-            -->
+                android:text="ACBC Media"
+                android:layout_marginTop="50dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CBANA Youth"
+                android:layout_marginTop="105dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotels"
+                android:layout_marginTop="155dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stage Coordinators"
+                android:layout_marginTop="205dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transportation"
+                android:layout_marginTop="255dp"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+                />
 
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="410dp"
+            android:layout_above="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:padding="20dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:id="@+id/textView4" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorGrey"
+                android:padding="2dp"
+                android:layout_marginTop="60dp"
+                android:text="Developed and Managed by ACBC Media"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"

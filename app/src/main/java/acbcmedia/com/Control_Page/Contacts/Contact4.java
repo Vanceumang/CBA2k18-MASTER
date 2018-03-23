@@ -11,5 +11,8 @@ public class Contact4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact4);
+
+        //getSupportActionBar().setTitle("Contact4");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

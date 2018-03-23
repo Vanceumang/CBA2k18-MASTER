@@ -1,5 +1,6 @@
 package acbcmedia.com.Control_Page.Contacts;
 
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -11,5 +12,11 @@ public class Contact1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact1);
+
+      //  getSupportActionBar().setTitle("Contact1");
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 }
