@@ -68,19 +68,11 @@ public class ActivityThree extends AppCompatActivity {
                     //Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://vanceumang.github.io/#home"));
                     //startActivityForResult(myIntent,2);
                 }
+
                 if(position == 3){
-                    Intent myIntent = new Intent(view.getContext(), Location1.class);
+                    Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.citypass.com/atlanta/things-to-do-atlanta"));
                     startActivityForResult(myIntent,3);
 
-                   // Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.google.com/maps/dir/''/atlanta+chin+baptist+church/@33.9006282,-84.2742941,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88f5a69483ae119b:0x22d254e0010fb203!2m2!1d-84.204254!2d33.900648"));
-                   // startActivityForResult(myIntent,3);
-                }
-                if(position == 4){
-                    Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.citypass.com/atlanta/things-to-do-atlanta"));
-                    startActivityForResult(myIntent,4);
-
-                    //Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.infiniteenergycenter.com/venues/detail/forum"));
-                    //startActivityForResult(myIntent,4);
                 }
             }
         });
