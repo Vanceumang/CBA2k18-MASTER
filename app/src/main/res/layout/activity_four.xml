@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/topBar"
-            android:background="@color/colorPrimaryDark">>
+            android:background="@color/colorPrimaryDark">
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hotels"
+                android:text="Hotels &amp; Hospitality"
                 android:layout_marginTop="155dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
@@ -90,7 +90,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Stage Coordinators"
+                android:text="Stage Coordinators &amp; Help Desk"
                 android:layout_marginTop="205dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
@@ -98,7 +98,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Transportation"
+                android:text="Transportations &amp; Security"
                 android:layout_marginTop="255dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
