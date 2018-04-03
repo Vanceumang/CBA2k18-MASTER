@@ -23,30 +23,7 @@ public class FriDinner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fridaydinner);
-
-        ListView list = (ListView) findViewById(R.id.theList);
-        Log.d(TAG, "onCreate: Started.");
-
-        ArrayList<String> names = new ArrayList<>();
-        names.add("Friday Zaan Rawl einak");
-        names.add("Thuthannak:         Inteek");
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-        names.add("Bible Zohlo Zuamawk  CCBC, ACBC, FBCI, FCCI, CCBC");
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-        names.add("Solo Zuawmawknak      ACBC, FBCI, FCCI, CEBC, FBCMD,");
-        names.add("Thuthangtha      Rev. Dr. Khaw Lian Uk,");
-        names.add("Thuthangtha       Rev. Dr. Stephen Hre Kio");
-        names.add("Thuthannak:         Inteek");
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-        names.add("Bible Zohlo Zuamawk  CCBC, ACBC, FBCI, FCCI, CCBC");
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-        names.add("Praise and Worshp Team");
-        names.add("Thuthannak:         Inteek");
-
-
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout, names);
-        list.setAdapter(adapter);
+        setContentView(R.layout.activity_fri_dinner);
 
 
     }

@@ -24,23 +24,6 @@ public class SunLunchDinner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sun_lunch_dinner);
 
-        ListView list = (ListView) findViewById(R.id.sunLunchDinner);
-        Log.d(TAG, "onCreate: Started.");
-
-        ArrayList<String> names = new ArrayList<>();
-        names.add("SUNDAY LUNCH AND DINNET");
-        names.add("Thuthannak:         Inteek");
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-        names.add("Praise and Worshp Team");
-        names.add("Thuthannak:         Inteek");
-
-
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.content_sun_lunch_dinner, names);
-        list.setAdapter(adapter);
-
-
     }
 
 }

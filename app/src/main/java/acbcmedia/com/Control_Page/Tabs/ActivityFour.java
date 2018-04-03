@@ -32,16 +32,6 @@ public class ActivityFour extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four);
 
-        /*Button button = (Button) findViewById(R.id.browserLocation);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("http://www.google.com"));
-                startActivity(intent);
-            }
-        });
-        */
-
 
         ListView list = (ListView) findViewById(R.id.contacts);
 

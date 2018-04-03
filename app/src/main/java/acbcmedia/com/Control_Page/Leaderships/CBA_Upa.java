@@ -1,9 +1,16 @@
 package acbcmedia.com.Control_Page.Leaderships;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
+import acbcmedia.com.Control_Page.Contacts.Contact3;
 import acbcmedia.com.Control_Page.R;
+import acbcmedia.com.Control_Page.Tabs.ActivityFour;
+import acbcmedia.com.Control_Page.Tabs.ActivityThree;
+import acbcmedia.com.Control_Page.Tabs.ActivityTwo;
 
 public class CBA_Upa extends AppCompatActivity {
 
@@ -11,5 +18,14 @@ public class CBA_Upa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cba__upa);
+
+        ImageView button = (ImageView) findViewById(R.id.backButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CBA_Upa.this,ActivityTwo.class);
+                startActivity(intent);
+            }
+        });
     }
 }

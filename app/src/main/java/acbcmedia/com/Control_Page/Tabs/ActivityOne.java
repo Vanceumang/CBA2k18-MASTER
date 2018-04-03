@@ -1,6 +1,8 @@
 package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,6 +10,7 @@ import android.support.design.widget.TabLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -24,6 +27,7 @@ import acbcmedia.com.Control_Page.SectionsPageAdapter;
  */
 
 public class ActivityOne extends AppCompatActivity {
+    private static final String TAG = "Activity3";
 
     private SectionsPageAdapter mSectionsPageAdapter;
 
@@ -32,6 +36,8 @@ public class ActivityOne extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
+        Log.d(TAG, "onCreate: Starting.");
+
 
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
@@ -43,9 +49,6 @@ public class ActivityOne extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
 
 
-        tabLayout.getTabAt(0).setText("FRI 25"); //setIcon(R.drawable.ic_assignment);
-        tabLayout.getTabAt(1).setText("SAT 26");  //setIcon(R.drawable.ic_autorenew);
-        tabLayout.getTabAt(2).setText("SUN 27");  //setIcon(R.drawable.ic_attach_file);
 
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
@@ -88,11 +91,12 @@ public class ActivityOne extends AppCompatActivity {
             }
         });
     }
-       private void setupViewPager(ViewPager viewPager) {
+    private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Tab1Fragment());
-        adapter.addFragment(new Tab2Fragment());
-        adapter.addFragment(new Tab3Fragment());
+        adapter.addFragment(new Tab1Fragment(), "MAY 26");
+        adapter.addFragment(new Tab2Fragment(), "MAY 27");
+        adapter.addFragment(new Tab3Fragment(), "MAY 28");
+        //adapter.addFragment();
         viewPager.setAdapter(adapter);
 
     }

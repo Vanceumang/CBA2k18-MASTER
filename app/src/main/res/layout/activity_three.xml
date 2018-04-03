@@ -14,8 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/topBar"
-            android:background="@color/colorPrimaryDark">>
-
+            android:background="@color/colorPrimaryDark">
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -51,24 +50,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:padding="8dp"
                 android:text="Locations"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
-
-
-            <ImageView
-                android:id="@+id/cbalogo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:layout_marginTop="200dp"
-                android:padding="100dp"
-                android:src="@drawable/tshirt" />
 
             <ListView
                 android:layout_width="match_parent"
@@ -90,7 +77,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hotels Information"
+                android:text="Hotel Information"
                 android:layout_marginTop="110dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
@@ -98,7 +85,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Infinite Energy Ceneter"
+                android:text="Infinite Energy Forum"
                 android:layout_marginTop="160dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
@@ -106,41 +93,50 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Recommended Food Places "
-                android:layout_marginTop="210dp"
-                android:textSize="15dp"
-                android:textAlignment="center"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Recommended Places to Visit"
-                android:layout_marginTop="260dp"
+                android:layout_marginTop="210dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
 
         </RelativeLayout>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/googlemap2"
+            android:layout_gravity="center"
+            android:layout_marginTop="300dp"
+            android:layout_width="385dp"
+            android:layout_height="100dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/slide_complex" />
+
+        </android.support.v7.widget.CardView>
+
+
 
         <RelativeLayout
-            android:layout_marginTop="410dp"
-            android:layout_above="@+id/bottomBar"
+            android:layout_marginTop="400dp"
+            android:layout_marginBottom="100dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/dev">
-            <TextView
+
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:background="@color/colorPrimary"
-                android:padding="20dp"
-                android:layout_marginTop="2dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="15sp"
-                android:id="@+id/textView4" />
+                android:src="@drawable/acbckhawmpi"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -148,7 +144,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@color/colorGrey"
                 android:padding="2dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="465dp"
                 android:text="Developed and Managed by ACBC Media"
                 android:textAlignment="center"
                 android:textColor="@color/black"

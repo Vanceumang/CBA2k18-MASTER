@@ -23,20 +23,6 @@ public class SatLunchDinner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sat_lunch_dinner);
 
-        ListView list = (ListView) findViewById(R.id.SatLunchDinner);
-        Log.d(TAG, "onCreate: Started.");
-
-        ArrayList<String> names = new ArrayList<>();
-        names.add("SATURDAY LUNCH AND DINNER");
-
-        names.add("Thuthannak:         Inteek");
-        names.add("Nubu Laam zuamawk    CCBC, ACBC, FBCI, FCCI");
-        names.add("Bible Zohlo Zuamawk  CCBC, ACBC, FBCI, FCCI, CCBC");
-
-
-
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.content_sat_lunch_dinner, names);
-        list.setAdapter(adapter);
 
     }
 
