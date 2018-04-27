@@ -93,9 +93,9 @@ public class ActivityOne extends AppCompatActivity {
     }
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Tab1Fragment(), "MAY 26");
-        adapter.addFragment(new Tab2Fragment(), "MAY 27");
-        adapter.addFragment(new Tab3Fragment(), "MAY 28");
+        adapter.addFragment(new Tab1Fragment(), "MAY 25");
+        adapter.addFragment(new Tab2Fragment(), "MAY 26");
+        adapter.addFragment(new Tab3Fragment(), "MAY 27");
         //adapter.addFragment();
         viewPager.setAdapter(adapter);
 

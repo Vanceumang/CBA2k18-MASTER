@@ -78,7 +78,6 @@
             android:id="@+id/biakinn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/acbc_biakinn3"
            android:scaleType="fitStart"
             />
 
