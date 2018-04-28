@@ -2,6 +2,7 @@ package acbcmedia.com.Control_Page.Schedule;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -44,7 +45,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.Fri_Evening:
                 // launch Activity
-                Intent intent1 = new Intent(getActivity(), FriEvening.class);
+                Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://cbana2k18.github.io/program/index1.html"));
                 startActivity(intent1);
                 break;
 

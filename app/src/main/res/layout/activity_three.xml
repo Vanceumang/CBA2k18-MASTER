@@ -15,18 +15,22 @@
             android:layout_height="50dp"
             android:id="@+id/topBar"
             android:background="@color/colorPrimaryDark">
+            <TextView
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimaryDark"
+                android:padding="11dp"
+                android:text="Locations"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </android.support.design.widget.AppBarLayout>
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_below="@+id/topBar"
-            android:layout_above="@+id/bottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/White">
 
         </RelativeLayout>
         <RelativeLayout
@@ -44,33 +48,21 @@
                 android:id="@+id/activityTitle3"
                 android:textAlignment="center"/>
 
-            <TextView
-                android:id="@+id/main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:background="@color/colorPrimaryDark"
-                android:padding="8dp"
-                android:text="Locations"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="20sp" />
-
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="150dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
                 android:id="@+id/theList"/>
 
+            <!--
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Atlanta Chin Baptist Church"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="30dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
@@ -78,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hotel Information"
-                android:layout_marginTop="110dp"
+                android:layout_marginTop="90dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
@@ -86,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Infinite Energy Forum"
-                android:layout_marginTop="160dp"
+                android:layout_marginTop="150dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
@@ -98,32 +90,28 @@
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
+            -->
 
         </RelativeLayout>
         <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/googlemap2"
             android:layout_gravity="center"
             android:layout_marginTop="300dp"
-            android:layout_width="385dp"
-            android:layout_height="100dp"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:src="@drawable/slide_complex" />
-
         </android.support.v7.widget.CardView>
 
-
-
         <RelativeLayout
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="410dp"
             android:layout_marginBottom="100dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="110dp"
             android:id="@+id/dev">
 
             <ImageView
@@ -136,19 +124,18 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dev"
+            android:layout_marginTop="-100dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:background="@color/colorGrey"
                 android:padding="2dp"
-                android:layout_marginTop="465dp"
                 android:text="Developed and Managed by ACBC Media"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="12sp"/>
+                android:textSize="15sp"/>
 
         </RelativeLayout>
 

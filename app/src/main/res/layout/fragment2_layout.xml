@@ -44,7 +44,7 @@
         <Button
             android:id="@+id/DayService"
             android:layout_width="200dp"
-            android:layout_marginStart="100dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -109,7 +109,7 @@
         <Button
             android:id="@+id/Lunch_Dinner"
             android:layout_width="200dp"
-            android:layout_marginStart="100dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -149,6 +149,7 @@
         <TextView
             android:id="@+id/f2time2"
             android:text="07:00PM - 011:00PM /Grand Ballroom"
+            android:layout_marginStart="10dp"
             android:textSize="14sp"
             android:layout_marginTop="50dp"
             android:padding="8dp"
@@ -159,7 +160,7 @@
         <Button
             android:id="@+id/Evening"
             android:layout_width="200dp"
-            android:layout_marginStart="100dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"

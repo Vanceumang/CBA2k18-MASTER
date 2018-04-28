@@ -25,7 +25,7 @@ import acbcmedia.com.Control_Page.R;
 public class ActivityFour extends AppCompatActivity {
 
     //declaration of Items for the listView
-    String items[] = new String [] {"", "", "", "", "",""};
+    String items[] = new String [] {"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality","Transportation",""};
 //"Hotel", "Transportation", "Food", "CBANA Youth", "ACBC Media"
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

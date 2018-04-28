@@ -2,6 +2,7 @@ package acbcmedia.com.Control_Page.Schedule;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -41,7 +42,7 @@ public class Tab3Fragment extends Fragment implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.Sun_DayService:
                 // launch Activity
-                Intent intent = new Intent(getActivity(), SunDayService.class);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://cbana2k18.github.io/program/index5.html"));
                 startActivity(intent);
                 break;
             case R.id.Sun_Lunch_Dinner:
@@ -51,7 +52,7 @@ public class Tab3Fragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.Sun_Evening:
                 // launch Activity
-                Intent intent2 = new Intent(getActivity(), SunEvening.class);
+                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://cbana2k18.github.io/program/index7.html"));
                 startActivity(intent2);
                 break;
 
