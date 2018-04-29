@@ -39,11 +39,11 @@
             android:layout_above="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:clipToPadding="false"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -51,9 +51,9 @@
                 android:id="@+id/linearLayout">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/Upa"
+                    android:id="@+id/Christian"
                     android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_height="130dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -64,43 +64,32 @@
                         android:orientation="vertical"
                         android:layout_centerHorizontal="true">
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:background="@drawable/cerclebackgroundpurple"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_people_outline_black_24dp"
-                            android:layout_centerHorizontal="true"/>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Hruaitu"
-                            android:textColor="@color/black"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="5dp"
-                            android:background="@color/lightgray" />
+                            android:text="Christian"
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="CBANA Leaders"
+                            android:text="Education"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/Mino"
+                    android:id="@+id/Culture"
                     android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_height="130dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -112,34 +101,23 @@
                         android:orientation="vertical"
                         android:layout_centerHorizontal="true">
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:background="@drawable/cerclebackgroundpink"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_lightbulb_outline_black_24dp"
-                            android:layout_centerHorizontal="true"/>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Mino"
-                            android:textColor="@color/black"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="5dp"
-                            android:background="@color/lightgray" />
+                            android:text="Culture"
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Youth Ministry"
+                            android:text="Literature"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -149,18 +127,18 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/linearLayout"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="5dp"
                 android:clipToPadding="false"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/Nubu"
+                    android:id="@+id/Develop"
                     android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_height="130dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -172,43 +150,32 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_centerHorizontal="true"
-                            android:background="@drawable/cerclebackgroundgreen"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_control_point_black_24dp" />
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Nubu"
-                            android:textColor="@color/black"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="5dp"
-                            android:background="@color/lightgray" />
+                            android:text="Development"
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Women Ministry"
+                            android:text="Department"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/CE"
+                    android:id="@+id/Minister"
                     android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_height="130dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -220,34 +187,23 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_centerHorizontal="true"
-                            android:background="@drawable/cerclebackgroundyello"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_wifi_black_24dp" />
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Christian Education"
-                            android:textColor="@color/black"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="5dp"
-                            android:background="@color/lightgray" />
+                            android:text="Minister"
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Sunday School"
+                            android:text="Counsil"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -256,59 +212,173 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/linearLayout"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="140dp"
                 android:clipToPadding="false"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/Guest"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/Mission"
+                    android:layout_width="150dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="10dp"
                     android:clickable="true"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_margin="11dp">
-                    <LinearLayout
+                    android:foreground="?android:attr/selectableItemBackground">
 
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:layout_centerHorizontal="true">
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:background="@drawable/cerclebackgroundlime"
-                            android:src="@drawable/ic_lightbulb_outline_black_24dp"
-                            android:padding="10dp"
-                            android:layout_centerHorizontal="true"/>
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
                             android:layout_marginTop="5dp"
-                            android:textColor="@color/black"
-                            android:text="Special Guests"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/lightgray"
-                            android:layout_margin="3dp"/>
+                            android:text="Mission"
+                            android:textColor="@color/black" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="CBANA "
-                            android:padding="5dp"
-                            android:textColor="@android:color/black"/>
+                            android:text="Department"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/Officers"
+                    android:layout_width="150dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Officers"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Council"
+                            android:textColor="@android:color/black" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="280dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/Women"
+                    android:layout_width="150dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Women"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Department"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/Youth"
+                    android:layout_width="150dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cbanalogo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Youth"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Department"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
@@ -324,7 +394,7 @@
                 app:menu="@menu/bottom_navigation_menu"
                 app:itemIconTint="@color/nav_item_colors"
                 app:itemTextColor="@color/nav_item_colors"
-                app:itemBackground="@color/colorPrimaryDark">>
+                app:itemBackground="@color/colorPrimaryDark">
 
             </android.support.design.widget.BottomNavigationView>
         </RelativeLayout>
