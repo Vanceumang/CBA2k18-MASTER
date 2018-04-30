@@ -12,10 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Ce;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Guests;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Mino;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Nubu;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Upa;
 import acbcmedia.com.Control_Page.R;
 
@@ -35,9 +32,9 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
         //Defining each Tabs(Hruaitu, Mino, Nubu, CE and Guests)
         hruaitu = (CardView) findViewById(R.id.Upa);
         mino = (CardView) findViewById(R.id.Mino);
-        nubu = (CardView) findViewById(R.id.Nubu);
-        ce = (CardView) findViewById(R.id.CE);
-        guests = (CardView) findViewById(R.id.Guest);
+//        nubu = (CardView) findViewById(R.id.Nubu);
+//        ce = (CardView) findViewById(R.id.CE);
+//        guests = (CardView) findViewById(R.id.Guest);
 
         //Add Click listener to the tabs
         hruaitu.setOnClickListener(this);
@@ -102,18 +99,18 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
                 i = new Intent(this,CBA_Mino.class);
                 startActivity(i);
                 break;
-            case R.id.Nubu:
-                i = new Intent(this,CBA_Nubu.class);
-                startActivity(i);
-                break;
-            case R.id.CE:
-                i = new Intent(this,CBA_Ce.class);
-                startActivity(i);
-                break;
-            case R.id.Guest:
-                i = new Intent(this,CBA_Guests.class);
-                startActivity(i);
-                break;
+//            case R.id.Nubu:
+//                i = new Intent(this,CBA_Nubu.class);
+//                startActivity(i);
+//                break;
+//            case R.id.CE:
+//                i = new Intent(this,CBA_Ce.class);
+//                startActivity(i);
+//                break;
+//            case R.id.Guest:
+//                i = new Intent(this,CBA_Guests.class);
+//                startActivity(i);
+//                break;
                 default:break;
 
 
