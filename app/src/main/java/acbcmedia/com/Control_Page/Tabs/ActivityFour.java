@@ -1,17 +1,17 @@
 package acbcmedia.com.Control_Page.Tabs;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.Contacts.Contact1;
@@ -20,54 +20,121 @@ import acbcmedia.com.Control_Page.Contacts.Contact3;
 import acbcmedia.com.Control_Page.Contacts.Contact4;
 import acbcmedia.com.Control_Page.Contacts.Contact5;
 import acbcmedia.com.Control_Page.R;
+import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
+import acbcmedia.com.Control_Page.RecyclerTouchListener;
 
 
 public class ActivityFour extends AppCompatActivity {
 
     //declaration of Items for the listView
-    String items[] = new String [] {"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality","Transportation",""};
-//"Hotel", "Transportation", "Food", "CBANA Youth", "ACBC Media"
+    private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation", ""};
+
+    //"Hotel", "Transportation", "Food", "CBANA Youth", "ACBC Media"
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four);
 
+//        final NestedScrollView nestedScrollView = findViewById(R.id.nested_scroll_view_4);
 
-        ListView list = (ListView) findViewById(R.id.contacts);
+        RecyclerView recyclerView = findViewById(R.id.contacts);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout4, items);
-        list.setAdapter(adapter);
+        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, items);
+//        ListView list = (ListView) findViewById(R.id.contacts);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout4, items);
+//        list.setAdapter(adapter);
 
+        recyclerView.setAdapter(recyclerOptionsAdapter);
 
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+//        Adding this function to allow nestedScrollView on the layout file without disabling
+//        ListView functions
+//        list.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                nestedScrollView.requestDisallowInterceptTouchEvent(true);
+//                int action = motionEvent.getActionMasked();
+//                switch (action){
+//                    case MotionEvent.ACTION_UP:
+//                        nestedScrollView.requestDisallowInterceptTouchEvent(false);
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
+
+//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//                if (position == 0) {
+//                    Intent myIntent = new Intent(view.getContext(), Contact1.class);
+//                    startActivityForResult(myIntent, 0);
+//                }
+//                if (position == 1) {
+//                    Intent myIntent = new Intent(view.getContext(), Contact2.class);
+//                    startActivityForResult(myIntent, 1);
+//                }
+//                if (position == 2) {
+//                    Intent myIntent = new Intent(view.getContext(), Contact3.class);
+//                    startActivityForResult(myIntent, 2);
+//                }
+//                if (position == 3) {
+//                    Intent myIntent = new Intent(view.getContext(), Contact4.class);
+//                    startActivityForResult(myIntent, 3);
+//                }
+//                if (position == 4) {
+//                    Intent myIntent = new Intent(view.getContext(), Contact5.class);
+//                    startActivityForResult(myIntent, 4);
+//                }
+//
+//
+//            }
+//        });
+
+//        Use this instead of the previous listView listener
+        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerView, new RecyclerTouchListener.ClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onClick(View view, int position) {
+                Intent myIntent;
+                switch (position) {
+                    case 0:
+                        myIntent = new Intent(ActivityFour.this, Contact1.class);
+                        startActivityForResult(myIntent, 0);
+                        break;
+                    case 1:
+                        myIntent = new Intent(view.getContext(), Contact2.class);
+                        startActivityForResult(myIntent, 1);
+                        break;
+                    case 2:
+                        myIntent = new Intent(view.getContext(), Contact3.class);
+                        startActivityForResult(myIntent, 2);
+                        break;
+                    case 3:
+                        myIntent = new Intent(view.getContext(), Contact4.class);
+                        startActivityForResult(myIntent, 3);
+                        break;
+                    case 4:
+                        myIntent = new Intent(view.getContext(), Contact5.class);
+                        startActivityForResult(myIntent, 4);
+                        break;
 
-                if(position == 0){
-                    Intent myIntent = new Intent(view.getContext(), Contact1.class);
-                    startActivityForResult(myIntent,0);
+                    default:
+                        break;
                 }
-                if(position == 1){
-                    Intent myIntent = new Intent(view.getContext(), Contact2.class);
-                    startActivityForResult(myIntent,1);
-                }
-                if(position == 2){
-                    Intent myIntent = new Intent(view.getContext(), Contact3.class);
-                    startActivityForResult(myIntent,2);
-                }
-                if(position == 3){
-                    Intent myIntent = new Intent(view.getContext(), Contact4.class);
-                    startActivityForResult(myIntent,3);
-                }
-                if(position == 4){
-                    Intent myIntent = new Intent(view.getContext(), Contact5.class);
-                    startActivityForResult(myIntent,4);
-                }
-
 
             }
-        });
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
 
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
@@ -79,7 +146,7 @@ public class ActivityFour extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.ic_home:
                         Intent intent0 = new Intent(ActivityFour.this, MainActivity.class);
                         startActivity(intent0);
@@ -108,4 +175,55 @@ public class ActivityFour extends AppCompatActivity {
             }
         });
     }
+
+//    public static interface ClickListener{
+//        public void onClick(View view, int position);
+//        public void onLongClick(View view, int position);
+//    }
+
+//    class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
+//        private ClickListener clickListener;
+//        private GestureDetector gestureDetector;
+//
+//        public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
+//            this.clickListener = clickListener;
+//            gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+//                @Override
+//                public boolean onSingleTapUp(MotionEvent e) {
+//                    return true;
+//                }
+//
+//                @Override
+//                public void onLongPress(MotionEvent e) {
+//                    View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
+//
+//                    if (child != null && clickListener != null) {
+//                        clickListener.onLongClick(child, recyclerView.getChildAdapterPosition(child));
+//                    }
+//                }
+//            });
+//
+//        }
+//
+//        @Override
+//        public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+//            View child = rv.findChildViewUnder(e.getX(), e.getY());
+//
+//            if (child != null && clickListener != null && gestureDetector.onTouchEvent(e)) {
+//                clickListener.onClick(child,rv.getChildAdapterPosition(child));
+//            }
+//
+//            return false;
+//        }
+//
+//        @Override
+//        public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+//
+//        }
+//
+//        @Override
+//        public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+//
+//        }
+//    }
 }

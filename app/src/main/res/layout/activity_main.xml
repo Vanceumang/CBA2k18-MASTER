@@ -258,7 +258,7 @@
     </android.support.v4.widget.NestedScrollView>
 
 
-    <!--The bottom navigation view, showing at all time-->
+    <!--The bottom navigation view, showing at all times-->
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavView_Bar"
         android:layout_width="match_parent"
