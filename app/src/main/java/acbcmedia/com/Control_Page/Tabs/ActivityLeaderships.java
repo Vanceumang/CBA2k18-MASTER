@@ -2,17 +2,14 @@ package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
-import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
+import acbcmedia.com.Control_Page.BottomNavigationIntents;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Ce;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Guests;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Mino;
@@ -85,43 +82,8 @@ public class ActivityLeaderships extends AppCompatActivity {
         }));
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
-        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-        Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(2);
-        menuItem.setChecked(true);
+        new BottomNavigationIntents(this, bottomNavigationView, 2);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.ic_home:
-                        Intent intent0 = new Intent(ActivityLeaderships.this, MainActivity.class);
-                        startActivity(intent0);
-                        break;
-
-                    case R.id.ic_schedule:
-                        Intent intent1 = new Intent(ActivityLeaderships.this, ActivitySchedule.class);
-                        startActivity(intent1);
-                        break;
-
-                    case R.id.ic_speakers:
-
-                        break;
-
-                    case R.id.ic_history:
-                        Intent intent3 = new Intent(ActivityLeaderships.this, ActivityLocations.class);
-                        startActivity(intent3);
-                        break;
-
-                    case R.id.ic_location:
-                        Intent intent4 = new Intent(ActivityLeaderships.this, ActivityContacts.class);
-                        startActivity(intent4);
-                        break;
-                }
-
-                return false;
-            }
-        });
     }
 
 

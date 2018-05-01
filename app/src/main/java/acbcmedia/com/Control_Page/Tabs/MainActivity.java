@@ -3,24 +3,19 @@ package acbcmedia.com.Control_Page.Tabs;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
+import acbcmedia.com.Control_Page.BottomNavigationIntents;
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.SectionsPageAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-
     private SectionsPageAdapter mSectionsPageAdapter;
-
     private ViewPager mViewPager;
 
 
@@ -39,44 +34,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
-        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-        Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(0);
-        menuItem.setChecked(true);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Intent intent;
-                switch (item.getItemId()) {
-                    case R.id.ic_home:
-                        break;
-
-                    case R.id.ic_schedule:
-                        intent = new Intent(MainActivity.this, ActivitySchedule.class);
-                        startActivity(intent);
-                        break;
-
-                    case R.id.ic_speakers:
-                        intent = new Intent(MainActivity.this, ActivityLeaderships.class);
-                        startActivity(intent);
-                        break;
-
-                    case R.id.ic_history:
-                        intent = new Intent(MainActivity.this, ActivityLocations.class);
-                        startActivity(intent);
-                        break;
-
-                    case R.id.ic_location:
-                        intent = new Intent(MainActivity.this, ActivityContacts.class);
-                        startActivity(intent);
-                        break;
-                }
-
-
-                return false;
-            }
-        });
+        new BottomNavigationIntents(this, bottomNavigationView,0);
 
     }
 

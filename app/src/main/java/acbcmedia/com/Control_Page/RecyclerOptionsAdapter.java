@@ -88,25 +88,6 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
             textView.setText(option);
         }
 
-
-//        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Log.d(TAG, "onClick: " + optionsList[position]);
-//                Toast.makeText(mContext, optionsList[position], Toast.LENGTH_SHORT).show();
-//
-////                switch (position) {
-////                    case 0:
-////                        Intent myIntent = new Intent(mContext, Contact1.class);
-////                        mContext.startActivity(myIntent);
-////                        break;
-////                    default:
-////                        break;
-////                }
-//
-//            }
-//        });
-
     }
 
     // Returns the total count of items in the list

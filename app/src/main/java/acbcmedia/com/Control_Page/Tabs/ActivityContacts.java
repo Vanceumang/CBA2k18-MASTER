@@ -9,12 +9,9 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import acbcmedia.com.Control_Page.BottomNavigationIntents;
-import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.Contacts.Contact1;
 import acbcmedia.com.Control_Page.Contacts.Contact2;
 import acbcmedia.com.Control_Page.Contacts.Contact3;
@@ -89,12 +86,8 @@ public class ActivityContacts extends AppCompatActivity {
         recyclerView.addItemDecoration(dividerItemDecoration);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
-        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-        Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(4);
-        menuItem.setChecked(true);
 
-        BottomNavigationIntents navigationIntents = new BottomNavigationIntents(this, bottomNavigationView);
+        new BottomNavigationIntents(this, bottomNavigationView,4);
 
 
 //        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
