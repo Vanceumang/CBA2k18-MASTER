@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.R;
@@ -35,6 +36,10 @@ public class ActivityThree extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four);
+
+        TextView textView = findViewById(R.id.main);
+
+        textView.setText("Locations");
 
 //        ListView list = (ListView) findViewById(R.id.theList);
 //        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout, names);
