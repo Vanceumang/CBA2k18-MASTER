@@ -24,7 +24,7 @@ import acbcmedia.com.Control_Page.SectionsPageAdapter;
  * Created by VC 1/13/18
  */
 
-public class ActivityOne extends AppCompatActivity {
+public class ActivitySchedule extends AppCompatActivity {
     private static final String TAG = "Activity3";
 
     private SectionsPageAdapter mSectionsPageAdapter;
@@ -60,7 +60,7 @@ public class ActivityOne extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.ic_home:
-                        Intent intent0 = new Intent(ActivityOne.this, MainActivity.class);
+                        Intent intent0 = new Intent(ActivitySchedule.this, MainActivity.class);
                         startActivity(intent0);
                         break;
 
@@ -69,17 +69,17 @@ public class ActivityOne extends AppCompatActivity {
                         break;
 
                     case R.id.ic_speakers:
-                        Intent intent2 = new Intent(ActivityOne.this, ActivityTwo.class);
+                        Intent intent2 = new Intent(ActivitySchedule.this, ActivityLeaderships.class);
                         startActivity(intent2);
                         break;
 
                     case R.id.ic_history:
-                        Intent intent3 = new Intent(ActivityOne.this, ActivityThree.class);
+                        Intent intent3 = new Intent(ActivitySchedule.this, ActivityLocations.class);
                         startActivity(intent3);
                         break;
 
                     case R.id.ic_location:
-                        Intent intent4 = new Intent(ActivityOne.this, ActivityFour.class);
+                        Intent intent4 = new Intent(ActivitySchedule.this, ActivityContacts.class);
                         startActivity(intent4);
                         break;
                 }

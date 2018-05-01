@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import acbcmedia.com.Control_Page.R;
-import acbcmedia.com.Control_Page.Tabs.ActivityTwo;
+import acbcmedia.com.Control_Page.Tabs.ActivityLeaderships;
 
 public class CBA_Nubu extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class CBA_Nubu extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CBA_Nubu.this,ActivityTwo.class);
+                Intent intent = new Intent(CBA_Nubu.this,ActivityLeaderships.class);
                 startActivity(intent);
             }
         });

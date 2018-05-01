@@ -53,22 +53,22 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.ic_schedule:
-                        intent = new Intent(MainActivity.this, ActivityOne.class);
+                        intent = new Intent(MainActivity.this, ActivitySchedule.class);
                         startActivity(intent);
                         break;
 
                     case R.id.ic_speakers:
-                        intent = new Intent(MainActivity.this, ActivityTwo.class);
+                        intent = new Intent(MainActivity.this, ActivityLeaderships.class);
                         startActivity(intent);
                         break;
 
                     case R.id.ic_history:
-                        intent = new Intent(MainActivity.this, ActivityThree.class);
+                        intent = new Intent(MainActivity.this, ActivityLocations.class);
                         startActivity(intent);
                         break;
 
                     case R.id.ic_location:
-                        intent = new Intent(MainActivity.this, ActivityFour.class);
+                        intent = new Intent(MainActivity.this, ActivityContacts.class);
                         startActivity(intent);
                         break;
                 }

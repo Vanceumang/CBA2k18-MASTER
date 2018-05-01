@@ -2,17 +2,18 @@ package acbcmedia.com.Control_Page.Tabs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import acbcmedia.com.Control_Page.BottomNavigationIntents;
 import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.Contacts.Contact1;
 import acbcmedia.com.Control_Page.Contacts.Contact2;
@@ -24,11 +25,12 @@ import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
 import acbcmedia.com.Control_Page.RecyclerTouchListener;
 
 
-public class ActivityFour extends AppCompatActivity {
+public class ActivityContacts extends AppCompatActivity {
 
     //declaration of Items for the listView
     private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation"};
 
+    private static final String TAG = "ActivityContacts";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,46 +40,11 @@ public class ActivityFour extends AppCompatActivity {
 
         RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, items);
 
-//        ListView list = (ListView) findViewById(R.id.contacts);
-//        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout4, items);
-//        list.setAdapter(adapter);
-
         recyclerView.setAdapter(recyclerOptionsAdapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//                if (position == 0) {
-//                    Intent myIntent = new Intent(view.getContext(), Contact1.class);
-//                    startActivityForResult(myIntent, 0);
-//                }
-//                if (position == 1) {
-//                    Intent myIntent = new Intent(view.getContext(), Contact2.class);
-//                    startActivityForResult(myIntent, 1);
-//                }
-//                if (position == 2) {
-//                    Intent myIntent = new Intent(view.getContext(), Contact3.class);
-//                    startActivityForResult(myIntent, 2);
-//                }
-//                if (position == 3) {
-//                    Intent myIntent = new Intent(view.getContext(), Contact4.class);
-//                    startActivityForResult(myIntent, 3);
-//                }
-//                if (position == 4) {
-//                    Intent myIntent = new Intent(view.getContext(), Contact5.class);
-//                    startActivityForResult(myIntent, 4);
-//                }
-//
-//
-//            }
-//        });
+        Log.d(TAG, "onCreate: " + this.getLocalClassName());
 
 //        Use this instead of the previous listView listener
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerView, new RecyclerTouchListener.ClickListener() {
@@ -86,7 +53,7 @@ public class ActivityFour extends AppCompatActivity {
                 Intent myIntent;
                 switch (position) {
                     case 0:
-                        myIntent = new Intent(ActivityFour.this, Contact1.class);
+                        myIntent = new Intent(ActivityContacts.this, Contact1.class);
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
@@ -105,11 +72,9 @@ public class ActivityFour extends AppCompatActivity {
                         myIntent = new Intent(view.getContext(), Contact5.class);
                         startActivityForResult(myIntent, 4);
                         break;
-
                     default:
                         break;
                 }
-
             }
 
             @Override
@@ -129,38 +94,43 @@ public class ActivityFour extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(4);
         menuItem.setChecked(true);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.ic_home:
-                        Intent intent0 = new Intent(ActivityFour.this, MainActivity.class);
-                        startActivity(intent0);
-                        break;
+        BottomNavigationIntents navigationIntents = new BottomNavigationIntents(this, bottomNavigationView);
 
-                    case R.id.ic_schedule:
-                        Intent intent1 = new Intent(ActivityFour.this, ActivityOne.class);
-                        startActivity(intent1);
-                        break;
 
-                    case R.id.ic_speakers:
-                        Intent intent2 = new Intent(ActivityFour.this, ActivityTwo.class);
-                        startActivity(intent2);
-                        break;
-
-                    case R.id.ic_history:
-                        Intent intent3 = new Intent(ActivityFour.this, ActivityThree.class);
-                        startActivity(intent3);
-                        break;
-
-                    case R.id.ic_location:
-                        break;
-                }
-
-                return false;
-            }
-        });
+//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.ic_home:
+//                        Intent intent0 = new Intent(ActivityContacts.this, MainActivity.class);
+//                        startActivity(intent0);
+//                        break;
+//
+//                    case R.id.ic_schedule:
+//                        Intent intent1 = new Intent(ActivityContacts.this, ActivitySchedule.class);
+//                        startActivity(intent1);
+//                        break;
+//
+//                    case R.id.ic_speakers:
+//                        Intent intent2 = new Intent(ActivityContacts.this, ActivityLeaderships.class);
+//                        startActivity(intent2);
+//                        break;
+//
+//                    case R.id.ic_history:
+//                        Intent intent3 = new Intent(ActivityContacts.this, ActivityLocations.class);
+//                        startActivity(intent3);
+//                        break;
+//
+//                    case R.id.ic_location:
+//                        break;
+//                }
+//
+//                return false;
+//            }
+//        });
     }
+
+
 
 //    public static interface ClickListener{
 //        public void onClick(View view, int position);

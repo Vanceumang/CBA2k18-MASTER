@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import acbcmedia.com.Control_Page.R;
-import acbcmedia.com.Control_Page.Tabs.ActivityTwo;
+import acbcmedia.com.Control_Page.Tabs.ActivityLeaderships;
 
 public class CBA_Mino extends AppCompatActivity {
 
@@ -19,7 +19,7 @@ public class CBA_Mino extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CBA_Mino.this,ActivityTwo.class);
+                Intent intent = new Intent(CBA_Mino.this,ActivityLeaderships.class);
                 startActivity(intent);
             }
         });

@@ -25,8 +25,8 @@ import acbcmedia.com.Control_Page.RecyclerTouchListener;
  * Created by VC on 1/16/18.
  */
 
-public class ActivityThree extends AppCompatActivity {
-    private static final String TAG = "ActivityThree";
+public class ActivityLocations extends AppCompatActivity {
+    private static final String TAG = "ActivityLocations";
 
     //declaration of Items for the listView
     String names[] = new String[]{"Atlanta Chin Baptist Church", "Hotels Information", "Infinite Energy Forum", "Recommended Places to Visit"};
@@ -147,17 +147,17 @@ public class ActivityThree extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.ic_home:
-                        Intent intent0 = new Intent(ActivityThree.this, MainActivity.class);
+                        Intent intent0 = new Intent(ActivityLocations.this, MainActivity.class);
                         startActivity(intent0);
                         break;
 
                     case R.id.ic_schedule:
-                        Intent intent1 = new Intent(ActivityThree.this, ActivityOne.class);
+                        Intent intent1 = new Intent(ActivityLocations.this, ActivitySchedule.class);
                         startActivity(intent1);
                         break;
 
                     case R.id.ic_speakers:
-                        Intent intent2 = new Intent(ActivityThree.this, ActivityTwo.class);
+                        Intent intent2 = new Intent(ActivityLocations.this, ActivityLeaderships.class);
                         startActivity(intent2);
                         break;
 
@@ -165,7 +165,7 @@ public class ActivityThree extends AppCompatActivity {
                         break;
 
                     case R.id.ic_location:
-                        Intent intent4 = new Intent(ActivityThree.this, ActivityFour.class);
+                        Intent intent4 = new Intent(ActivityLocations.this, ActivityContacts.class);
                         startActivity(intent4);
                         break;
                 }

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/White"
-    tools:context="acbcmedia.com.Control_Page.Tabs.MainActivity">
+    tools:context="acbcmedia.com.Control_Page.Tabs.MainActivity"
+    >
 
     <!--NestedScrollview to scroll thru diff layouts-->
     <android.support.v4.widget.NestedScrollView
