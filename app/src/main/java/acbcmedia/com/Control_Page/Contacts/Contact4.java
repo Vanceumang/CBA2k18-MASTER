@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import acbcmedia.com.Control_Page.R;
-import acbcmedia.com.Control_Page.Tabs.ActivityFour;
+import acbcmedia.com.Control_Page.Tabs.ActivityContacts;
 
 public class Contact4 extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class Contact4 extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Contact4.this, ActivityFour.class);
+                Intent intent = new Intent(Contact4.this, ActivityContacts.class);
                 startActivity(intent);
             }
         });

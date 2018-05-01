@@ -6,11 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import acbcmedia.com.Control_Page.Contacts.Contact3;
 import acbcmedia.com.Control_Page.R;
-import acbcmedia.com.Control_Page.Tabs.ActivityFour;
-import acbcmedia.com.Control_Page.Tabs.ActivityThree;
-import acbcmedia.com.Control_Page.Tabs.ActivityTwo;
+import acbcmedia.com.Control_Page.Tabs.ActivityLeaderships;
 
 public class CBA_Upa extends AppCompatActivity {
 
@@ -23,7 +20,7 @@ public class CBA_Upa extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CBA_Upa.this,ActivityTwo.class);
+                Intent intent = new Intent(CBA_Upa.this,ActivityLeaderships.class);
                 startActivity(intent);
             }
         });
