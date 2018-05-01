@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         ImageView locate = (ImageView) findViewById(R.id.location);
         locate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,29 +47,29 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
                 switch (item.getItemId()) {
                     case R.id.ic_home:
-
                         break;
 
                     case R.id.ic_schedule:
-                        Intent intent1 = new Intent(MainActivity.this, ActivityOne.class);
-                        startActivity(intent1);
+                        intent = new Intent(MainActivity.this, ActivityOne.class);
+                        startActivity(intent);
                         break;
 
                     case R.id.ic_speakers:
-                        Intent intent2 = new Intent(MainActivity.this, ActivityTwo.class);
-                        startActivity(intent2);
+                        intent = new Intent(MainActivity.this, ActivityTwo.class);
+                        startActivity(intent);
                         break;
 
                     case R.id.ic_history:
-                        Intent intent3 = new Intent(MainActivity.this, ActivityThree.class);
-                        startActivity(intent3);
+                        intent = new Intent(MainActivity.this, ActivityThree.class);
+                        startActivity(intent);
                         break;
 
                     case R.id.ic_location:
-                        Intent intent4 = new Intent(MainActivity.this, ActivityFour.class);
-                        startActivity(intent4);
+                        intent = new Intent(MainActivity.this, ActivityFour.class);
+                        startActivity(intent);
                         break;
                 }
 

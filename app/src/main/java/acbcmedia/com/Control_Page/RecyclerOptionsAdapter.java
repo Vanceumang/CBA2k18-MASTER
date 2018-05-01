@@ -2,36 +2,48 @@ package acbcmedia.com.Control_Page;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 //This class is the adapter for the recyclerView
 public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptionsAdapter.ViewHolder> {
-    private String[] optionsList;
+    private String[] optionsList, speakerTop, speakerBottom;
     private Context mContext;
+    private Boolean isItSpeakers; //The adapter acts differently over for the speakers
     private static final String TAG = "RecyclerOptionsAdapter";
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView optionsTextView;
+        private TextView optionsTextView, speakerTopText, speakerBottomText;
         private LinearLayout parentLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            optionsTextView = itemView.findViewById(R.id.options_textview);
-            parentLayout = itemView.findViewById(R.id.recycler_linear);
+
+            if (isItSpeakers) {
+                speakerTopText = itemView.findViewById(R.id.speakerTop);
+                speakerBottomText = itemView.findViewById(R.id.speakerBottom);
+            } else {
+                optionsTextView = itemView.findViewById(R.id.options_textview);
+                parentLayout = itemView.findViewById(R.id.recycler_linear);
+            }
         }
     }
-
 
     public RecyclerOptionsAdapter(Context context, String[] options) {
         mContext = context;
         this.optionsList = options;
+        isItSpeakers = false;
+    }
+
+    public RecyclerOptionsAdapter(Context mContext, String[] speakerTop, String[] speakerBottom) {
+        this.mContext = mContext;
+        this.speakerTop = speakerTop;
+        this.speakerBottom = speakerBottom;
+        isItSpeakers = true;
     }
 
     //     inflate the item layout and create the holder
@@ -40,8 +52,14 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
+        View optionsView;
+
 //        Inflate the custom view
-        View optionsView = inflater.inflate(R.layout.item_options, parent, false);
+        if (isItSpeakers) {
+            optionsView = inflater.inflate(R.layout.cardview_items, parent, false);
+        } else {
+            optionsView = inflater.inflate(R.layout.item_options, parent, false);
+        }
 
 //        Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(optionsView);
@@ -51,35 +69,53 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
     // Involves populating data into the item through holder
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+
+//        Get the model data based on the current position
+        if (isItSpeakers) {
+            final String speakerTopText = speakerTop[position];
+            final String speakerBotText = speakerBottom[position];
+
+            final TextView topTextView = holder.speakerTopText;
+            final TextView botTextView = holder.speakerBottomText;
+
+            topTextView.setText(speakerTopText);
+            botTextView.setText(speakerBotText);
+        } else {
 //        Get model data based on position
-        final String option = optionsList[position];
+            final String option = optionsList[position];
 
-        final TextView textView = holder.optionsTextView;
-        textView.setText(option);
+            final TextView textView = holder.optionsTextView;
+            textView.setText(option);
+        }
 
-        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG, "onClick: " + optionsList[position]);
-                Toast.makeText(mContext, optionsList[position], Toast.LENGTH_SHORT).show();
 
-//                switch (position) {
-//                    case 0:
-//                        Intent myIntent = new Intent(mContext, Contact1.class);
-//                        mContext.startActivity(myIntent);
-//                        break;
-//                    default:
-//                        break;
-//                }
-
-            }
-        });
+//        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Log.d(TAG, "onClick: " + optionsList[position]);
+//                Toast.makeText(mContext, optionsList[position], Toast.LENGTH_SHORT).show();
+//
+////                switch (position) {
+////                    case 0:
+////                        Intent myIntent = new Intent(mContext, Contact1.class);
+////                        mContext.startActivity(myIntent);
+////                        break;
+////                    default:
+////                        break;
+////                }
+//
+//            }
+//        });
 
     }
 
     // Returns the total count of items in the list
     @Override
     public int getItemCount() {
-        return optionsList.length;
+        if (isItSpeakers) {
+            return speakerTop.length;
+        } else {
+            return optionsList.length;
+        }
     }
 }

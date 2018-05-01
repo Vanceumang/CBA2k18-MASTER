@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,34 +17,48 @@ import acbcmedia.com.Control_Page.BottomNavigationViewHelper;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Mino;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Upa;
 import acbcmedia.com.Control_Page.R;
+import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
 
 /**
-Created by VC
+ * Created by VC
  */
 
-public class ActivityTwo extends AppCompatActivity implements View.OnClickListener{
+public class ActivityTwo extends AppCompatActivity implements View.OnClickListener {
 
     private CardView hruaitu, mino, nubu, ce, guests;
+    private String[] speakerTop = new String[]{"Christian", "Culture", "Development", "Minister", "Mission", "Officers", "Women", "Youth"};
+    private String[] speakerBottom = new String[]{"Education", "Literature", "Department", "Council", "Department", "Council", "Department", "Department"};
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
 
+        RecyclerView recyclerView = findViewById(R.id.recycler_card);
+
+        RecyclerOptionsAdapter adapter = new RecyclerOptionsAdapter(this, speakerTop, speakerBottom);
+
+        recyclerView.setAdapter(adapter);
+
+        layoutManager = new GridLayoutManager(this, 2);
+
+        recyclerView.setLayoutManager(layoutManager);
+
+
         //Defining each Tabs(Hruaitu, Mino, Nubu, CE and Guests)
-        hruaitu = (CardView) findViewById(R.id.Upa);
-        mino = (CardView) findViewById(R.id.Mino);
+//        hruaitu = (CardView) findViewById(R.id.Upa);
+//        mino = (CardView) findViewById(R.id.Mino);
 //        nubu = (CardView) findViewById(R.id.Nubu);
 //        ce = (CardView) findViewById(R.id.CE);
 //        guests = (CardView) findViewById(R.id.Guest);
 
-        //Add Click listener to the tabs
-        hruaitu.setOnClickListener(this);
-        mino.setOnClickListener(this);
-        nubu.setOnClickListener(this);
-        ce.setOnClickListener(this);
-        guests.setOnClickListener(this);
-
+//        //Add Click listener to the tabs
+//        hruaitu.setOnClickListener(this);
+//        mino.setOnClickListener(this);
+//        nubu.setOnClickListener(this);
+//        ce.setOnClickListener(this);
+//        guests.setOnClickListener(this);
 
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
@@ -54,7 +70,7 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.ic_home:
                         Intent intent0 = new Intent(ActivityTwo.this, MainActivity.class);
                         startActivity(intent0);
@@ -90,13 +106,13 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
     public void onClick(View view) {
         Intent i;
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.Upa:
-                i = new Intent(this,CBA_Upa.class);
+                i = new Intent(this, CBA_Upa.class);
                 startActivity(i);
                 break;
             case R.id.Mino:
-                i = new Intent(this,CBA_Mino.class);
+                i = new Intent(this, CBA_Mino.class);
                 startActivity(i);
                 break;
 //            case R.id.Nubu:
@@ -111,7 +127,8 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
 //                i = new Intent(this,CBA_Guests.class);
 //                startActivity(i);
 //                break;
-                default:break;
+            default:
+                break;
 
 
         }
