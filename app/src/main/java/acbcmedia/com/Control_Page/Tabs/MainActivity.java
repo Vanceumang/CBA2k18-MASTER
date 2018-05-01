@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        To populate the bottom navigation menu on the layout
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
-
         new BottomNavigationIntents(this, bottomNavigationView,0);
 
     }

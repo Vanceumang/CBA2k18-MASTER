@@ -47,6 +47,10 @@ public class BottomNavigationIntents {
                             break;
                         }
                         intent = new Intent(context, MainActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY); //This always go back to main menu
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); //This has 1 activity instance each
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Always backto home
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                         break;
 
@@ -55,6 +59,7 @@ public class BottomNavigationIntents {
                             break;
                         }
                         intent = new Intent(context, ActivitySchedule.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                         break;
 
@@ -63,6 +68,7 @@ public class BottomNavigationIntents {
                             break;
                         }
                         intent = new Intent(context, ActivityLeaderships.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                         break;
 
@@ -71,6 +77,7 @@ public class BottomNavigationIntents {
                             break;
                         }
                         intent = new Intent(context, ActivityLocations.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                         break;
 
@@ -79,9 +86,11 @@ public class BottomNavigationIntents {
                             break;
                         }
                         intent = new Intent(context, ActivityContacts.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                         break;
                 }
+
 
                 return false;
             }

@@ -32,7 +32,7 @@ public class ActivityLocations extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_four);
+        setContentView(R.layout.activity_list_pictures);
 
         TextView textView = findViewById(R.id.main);
 

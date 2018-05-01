@@ -31,7 +31,7 @@ public class ActivityContacts extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_four);
+        setContentView(R.layout.activity_list_pictures);
 
         RecyclerView recyclerView = findViewById(R.id.contacts);
 
@@ -89,90 +89,6 @@ public class ActivityContacts extends AppCompatActivity {
 
         new BottomNavigationIntents(this, bottomNavigationView,4);
 
-
-//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.ic_home:
-//                        Intent intent0 = new Intent(ActivityContacts.this, MainActivity.class);
-//                        startActivity(intent0);
-//                        break;
-//
-//                    case R.id.ic_schedule:
-//                        Intent intent1 = new Intent(ActivityContacts.this, ActivitySchedule.class);
-//                        startActivity(intent1);
-//                        break;
-//
-//                    case R.id.ic_speakers:
-//                        Intent intent2 = new Intent(ActivityContacts.this, ActivityLeaderships.class);
-//                        startActivity(intent2);
-//                        break;
-//
-//                    case R.id.ic_history:
-//                        Intent intent3 = new Intent(ActivityContacts.this, ActivityLocations.class);
-//                        startActivity(intent3);
-//                        break;
-//
-//                    case R.id.ic_location:
-//                        break;
-//                }
-//
-//                return false;
-//            }
-//        });
     }
 
-
-
-//    public static interface ClickListener{
-//        public void onClick(View view, int position);
-//        public void onLongClick(View view, int position);
-//    }
-
-//    class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
-//        private ClickListener clickListener;
-//        private GestureDetector gestureDetector;
-//
-//        public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
-//            this.clickListener = clickListener;
-//            gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
-//                @Override
-//                public boolean onSingleTapUp(MotionEvent e) {
-//                    return true;
-//                }
-//
-//                @Override
-//                public void onLongPress(MotionEvent e) {
-//                    View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
-//
-//                    if (child != null && clickListener != null) {
-//                        clickListener.onLongClick(child, recyclerView.getChildAdapterPosition(child));
-//                    }
-//                }
-//            });
-//
-//        }
-//
-//        @Override
-//        public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
-//            View child = rv.findChildViewUnder(e.getX(), e.getY());
-//
-//            if (child != null && clickListener != null && gestureDetector.onTouchEvent(e)) {
-//                clickListener.onClick(child,rv.getChildAdapterPosition(child));
-//            }
-//
-//            return false;
-//        }
-//
-//        @Override
-//        public void onTouchEvent(RecyclerView rv, MotionEvent e) {
-//
-//        }
-//
-//        @Override
-//        public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-//
-//        }
-//    }
 }
