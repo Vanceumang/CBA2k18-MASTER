@@ -1,12 +1,12 @@
 package acbcmedia.com.Control_Page.Tabs;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -27,22 +27,18 @@ import acbcmedia.com.Control_Page.RecyclerTouchListener;
 public class ActivityFour extends AppCompatActivity {
 
     //declaration of Items for the listView
-    private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation", ""};
+    private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation"};
 
-    //"Hotel", "Transportation", "Food", "CBANA Youth", "ACBC Media"
-    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four);
 
-//        final NestedScrollView nestedScrollView = findViewById(R.id.nested_scroll_view_4);
-
         RecyclerView recyclerView = findViewById(R.id.contacts);
 
         RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, items);
-//        ListView list = (ListView) findViewById(R.id.contacts);
 
+//        ListView list = (ListView) findViewById(R.id.contacts);
 //        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_item_layout4, items);
 //        list.setAdapter(adapter);
 
@@ -50,21 +46,7 @@ public class ActivityFour extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        Adding this function to allow nestedScrollView on the layout file without disabling
-//        ListView functions
-//        list.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View view, MotionEvent motionEvent) {
-//                nestedScrollView.requestDisallowInterceptTouchEvent(true);
-//                int action = motionEvent.getActionMasked();
-//                switch (action){
-//                    case MotionEvent.ACTION_UP:
-//                        nestedScrollView.requestDisallowInterceptTouchEvent(false);
-//                        break;
-//                }
-//                return false;
-//            }
-//        });
+
 
 //        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //
@@ -136,8 +118,12 @@ public class ActivityFour extends AppCompatActivity {
             }
         }));
 
+//        To add the divider lines in between the items
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+                DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(4);
