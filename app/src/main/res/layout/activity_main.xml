@@ -258,16 +258,20 @@
     </android.support.v4.widget.NestedScrollView>
 
 
-    <!--The bottom navigation view, showing at all time-->
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottomNavView_Bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:itemBackground="@color/colorPrimaryDark"
-        app:itemIconTint="@color/nav_item_colors"
-        app:itemTextColor="@color/nav_item_colors"
-        app:menu="@menu/bottom_navigation_menu">
-    </android.support.design.widget.BottomNavigationView>
+    <!--The bottom navigation view, showing at all times-->
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/bottomNav_Bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--app:itemBackground="@color/colorPrimaryDark"-->
+        <!--app:itemIconTint="@color/nav_item_colors"-->
+        <!--app:itemTextColor="@color/nav_item_colors"-->
+        <!--app:menu="@menu/bottom_navigation_menu">-->
+    <!--</android.support.design.widget.BottomNavigationView>-->
+
+    <!--This includes the bottom menu, instead of using the same code over and over again-->
+    <include layout="@layout/menu_bottom_navigation" />
+
 
 </android.support.design.widget.CoordinatorLayout>
