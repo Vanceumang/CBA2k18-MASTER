@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="acbcmedia.com.Control_Page.Contacts.Contact2">
+    tools:context="acbcmedia.com.Control_Page.Contacts.ContactsCatering">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"

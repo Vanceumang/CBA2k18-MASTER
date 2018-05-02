@@ -27,13 +27,9 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
             if (isItSpeakers) {
                 speakerTopText = itemView.findViewById(R.id.speakerTop);
                 speakerBottomText = itemView.findViewById(R.id.speakerBottom);
-            } else if (className.equals("Contact1")) {
+            } else if (className.contains("Contacts")) {
                 optionsTextView = itemView.findViewById(R.id.options_contactview);
                 optionsTextViewBot = itemView.findViewById(R.id.options_contactview_lower);
-
-//                optionsTextView.setTextSize(14);
-//                optionsTextViewBot.setTextSize(14);
-
             } else {
                 optionsTextView = itemView.findViewById(R.id.options_textview);
                 parentLayout = itemView.findViewById(R.id.recycler_linear);
@@ -49,19 +45,19 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
         this.className = context.getClass().getSimpleName();
     }
 
-    public RecyclerOptionsAdapter(Context context, String[] speakerTop, String[] speakerBottom) {
+    public RecyclerOptionsAdapter(Context context, String[] speakerTop, String[] speakerBottom, Boolean isItSpeakers) {
         this.mContext = context;
         this.speakerTop = speakerTop;
         this.speakerBottom = speakerBottom;
-        isItSpeakers = true;
+        this.isItSpeakers = isItSpeakers;
         this.className = context.getClass().getSimpleName();
     }
 
-    public RecyclerOptionsAdapter(Context context, String[] optionsList, String[] optionsTextViewBot, Boolean isItSpeakers) {
+    public RecyclerOptionsAdapter(Context context, String[] optionsList, String[] optionsTextViewBot) {
         this.mContext = context;
         this.optionsList = optionsList;
         this.optionsTextBot = optionsTextViewBot;
-        this.isItSpeakers = isItSpeakers;
+        isItSpeakers = false;
         this.className = context.getClass().getSimpleName();
     }
 
@@ -76,7 +72,7 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
 //        Inflate the custom view
         if (isItSpeakers) {
             optionsView = inflater.inflate(R.layout.cardview_items, parent, false);
-        } else if (className.equals("Contact1")) {
+        } else if (className.contains("Contacts")) {
             optionsView = inflater.inflate(R.layout.item_contact_options, parent, false);
         } else {
             optionsView = inflater.inflate(R.layout.item_options, parent, false);
@@ -101,7 +97,7 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
 
             topTextView.setText(speakerTopText);
             botTextView.setText(speakerBotText);
-        } else if (className.equals("Contact1")) {
+        } else if (className.contains("Contacts")) {
 //        Get model data based on position
             final String option = optionsList[position];
             final String phone = optionsTextBot[position];

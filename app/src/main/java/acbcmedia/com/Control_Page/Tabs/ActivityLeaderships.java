@@ -36,7 +36,7 @@ public class ActivityLeaderships extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recycler_card);
 
-        RecyclerOptionsAdapter adapter = new RecyclerOptionsAdapter(this, speakerTop, speakerBottom);
+        RecyclerOptionsAdapter adapter = new RecyclerOptionsAdapter(this, speakerTop, speakerBottom, false);
 
         recyclerView.setAdapter(adapter);
 

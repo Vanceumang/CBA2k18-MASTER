@@ -35,7 +35,7 @@
             android:name=".Tabs.ActivityLocations"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Tabs.ActivityContacts"
+            android:name=".Tabs.ActivityContact"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Schedule.SatDayService"
@@ -116,20 +116,20 @@
         <activity android:name=".Leaderships.CBA_Guests" />
         <activity android:name=".Testing" />
         <activity
-            android:name=".Contacts.Contact1"
-            android:parentActivityName=".Tabs.ActivityContacts" />
+            android:name=".Contacts.ContactsACBC"
+            android:parentActivityName=".Tabs.ActivityContact" />
         <activity
-            android:name=".Contacts.Contact2"
-            android:parentActivityName=".Tabs.ActivityContacts" />
+            android:name=".Contacts.ContactsCatering"
+            android:parentActivityName=".Tabs.ActivityContact" />
         <activity
-            android:name=".Contacts.Contact3"
-            android:parentActivityName=".Tabs.ActivityContacts" />
+            android:name=".Contacts.ContactsHotels"
+            android:parentActivityName=".Tabs.ActivityContact" />
         <activity
-            android:name=".Contacts.Contact4"
-            android:parentActivityName=".Tabs.ActivityContacts" />
+            android:name=".Contacts.ContactsStageManagers"
+            android:parentActivityName=".Tabs.ActivityContact" />
         <activity
-            android:name=".Contacts.Contact5"
-            android:parentActivityName=".Tabs.ActivityContacts" />
+            android:name=".Contacts.ContactsTransportation"
+            android:parentActivityName=".Tabs.ActivityContact" />
         <activity android:name=".Locations.Location1" />
         <activity android:name=".Locations.Location2" />
         <activity android:name=".Locations.Location3" />

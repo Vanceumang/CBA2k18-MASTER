@@ -12,22 +12,22 @@ import android.util.Log;
 import android.view.View;
 
 import acbcmedia.com.Control_Page.BottomNavigationIntents;
-import acbcmedia.com.Control_Page.Contacts.Contact1;
-import acbcmedia.com.Control_Page.Contacts.Contact2;
-import acbcmedia.com.Control_Page.Contacts.Contact3;
-import acbcmedia.com.Control_Page.Contacts.Contact4;
-import acbcmedia.com.Control_Page.Contacts.Contact5;
+import acbcmedia.com.Control_Page.Contacts.ContactsACBC;
+import acbcmedia.com.Control_Page.Contacts.ContactsCatering;
+import acbcmedia.com.Control_Page.Contacts.ContactsHotels;
+import acbcmedia.com.Control_Page.Contacts.ContactsStageManagers;
+import acbcmedia.com.Control_Page.Contacts.ContactsTransportation;
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
 import acbcmedia.com.Control_Page.RecyclerTouchListener;
 
 
-public class ActivityContacts extends AppCompatActivity {
+public class ActivityContact extends AppCompatActivity {
 
     //declaration of Items for the listView
     private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation"};
 
-    private static final String TAG = "ActivityContacts";
+    private static final String TAG = "ActivityContact";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,23 +50,23 @@ public class ActivityContacts extends AppCompatActivity {
                 Intent myIntent;
                 switch (position) {
                     case 0:
-                        myIntent = new Intent(ActivityContacts.this, Contact1.class);
+                        myIntent = new Intent(ActivityContact.this, ContactsACBC.class);
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                        myIntent = new Intent(view.getContext(), Contact2.class);
+                        myIntent = new Intent(view.getContext(), ContactsCatering.class);
                         startActivityForResult(myIntent, 1);
                         break;
                     case 2:
-                        myIntent = new Intent(view.getContext(), Contact3.class);
+                        myIntent = new Intent(view.getContext(), ContactsHotels.class);
                         startActivityForResult(myIntent, 2);
                         break;
                     case 3:
-                        myIntent = new Intent(view.getContext(), Contact4.class);
+                        myIntent = new Intent(view.getContext(), ContactsStageManagers.class);
                         startActivityForResult(myIntent, 3);
                         break;
                     case 4:
-                        myIntent = new Intent(view.getContext(), Contact5.class);
+                        myIntent = new Intent(view.getContext(), ContactsTransportation.class);
                         startActivityForResult(myIntent, 4);
                         break;
                     default:
