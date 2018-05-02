@@ -20,7 +20,7 @@ public class ContactsTransportation extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_main);
 
 //        Toolbar title
-        toolbar.setTitle("Catering");
+        toolbar.setTitle("Transportation");
 
 //        Set the toolbar as an actionbar that can contain menus
         setSupportActionBar(toolbar);

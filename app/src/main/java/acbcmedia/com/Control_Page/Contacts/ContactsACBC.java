@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
@@ -18,16 +19,19 @@ public class ContactsACBC extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar_main);
 
-        toolbar.setTitle("ACBC Media Contacts");
+//        Toolbar title
+        toolbar.setTitle("ACBC Media Team");
 
+//        Set the toolbar as an actionbar that can contain menus
         setSupportActionBar(toolbar);
 
-//        Home button on the toolbar
+//        Enable the home button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        Logo on the toolbar
-//        getSupportActionBar().setLogo(R.mipmap.ic_cbana_round);
-//        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+//        Set the top textview
+        TextView textView = findViewById(R.id.info_text);
+
+        textView.setText("ACBC Media Team Contacts");
 
         String names[] = new String[]{"1. Pu Hu", "2. Luaite", "3. Salai Hute", "4. Dinga"};
         String phones[] = new String[]{"678-776-3189","678-345-3119", "678-345-3119", "770-345-7119"};

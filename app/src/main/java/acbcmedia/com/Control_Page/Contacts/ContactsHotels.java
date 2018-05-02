@@ -20,7 +20,7 @@ public class ContactsHotels extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_main);
 
 //        Toolbar title
-        toolbar.setTitle("Catering");
+        toolbar.setTitle("Hotels");
 
 //        Set the toolbar as an actionbar that can contain menus
         setSupportActionBar(toolbar);
@@ -33,6 +33,7 @@ public class ContactsHotels extends AppCompatActivity {
 
         textView.setText("Hotels");
 
+//        The names and phone numbers
         String names[] = new String[]{"1. Albert Hum", "2. Justin Thang", "3. Saya San No Thuan", "4. Siangte"};
         String phones[] = new String[]{"678-776-3189","678-345-3119", "678-345-3119", "770-345-7119"};
 

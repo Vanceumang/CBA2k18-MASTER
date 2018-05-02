@@ -57,15 +57,15 @@ public class ActivityContact extends AppCompatActivity {
                         myIntent = new Intent(view.getContext(), ContactsCatering.class);
                         startActivityForResult(myIntent, 1);
                         break;
-                    case 2:
+                    case 3:
                         myIntent = new Intent(view.getContext(), ContactsHotels.class);
                         startActivityForResult(myIntent, 2);
                         break;
-                    case 3:
+                    case 4:
                         myIntent = new Intent(view.getContext(), ContactsStageManagers.class);
                         startActivityForResult(myIntent, 3);
                         break;
-                    case 4:
+                    case 5:
                         myIntent = new Intent(view.getContext(), ContactsTransportation.class);
                         startActivityForResult(myIntent, 4);
                         break;

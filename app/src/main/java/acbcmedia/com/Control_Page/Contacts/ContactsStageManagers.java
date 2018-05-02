@@ -20,7 +20,7 @@ public class ContactsStageManagers extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_main);
 
 //        Toolbar title
-        toolbar.setTitle("Catering");
+        toolbar.setTitle("Stage Managers");
 
 //        Set the toolbar as an actionbar that can contain menus
         setSupportActionBar(toolbar);
