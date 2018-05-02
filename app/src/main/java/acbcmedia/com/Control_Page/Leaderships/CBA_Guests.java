@@ -14,7 +14,7 @@ public class CBA_Guests extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cba__guests);
+        setContentView(R.layout.activity_cba_guests);
 
         ImageView button = (ImageView) findViewById(R.id.backButton);
         button.setOnClickListener(new View.OnClickListener() {

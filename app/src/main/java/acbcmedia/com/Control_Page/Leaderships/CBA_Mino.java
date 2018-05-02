@@ -14,7 +14,7 @@ public class CBA_Mino extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cba__mino);
+        setContentView(R.layout.activity_cba_mino);
         ImageView button = (ImageView) findViewById(R.id.backButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

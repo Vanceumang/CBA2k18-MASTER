@@ -14,7 +14,7 @@ public class CBA_Ce extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cba__ce);
+        setContentView(R.layout.activity_cba_ce);
 
         ImageView button = (ImageView) findViewById(R.id.backButton);
         button.setOnClickListener(new View.OnClickListener() {

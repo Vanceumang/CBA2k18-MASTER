@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -24,99 +23,150 @@
     </android.support.v4.widget.NestedScrollView>
 
     <RelativeLayout
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
+        android:id="@+id/dev"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/dev">
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="35sp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_back"
-           />
+            android:src="@drawable/ic_arrow_back" />
 
     </RelativeLayout>
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
-        android:layout_gravity="center"
-        android:layout_width="365dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="5sp"
-        android:layout_marginEnd="5sp"
-        android:layout_marginTop="100dp"
-        card_view:cardCornerRadius="4dp">
-        <TextView
-            android:id="@+id/info_text"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/info_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="ACBC Media Team Contacts"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="18sp" />-->
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:ellipsize="end"
-            android:padding="10dp"
-            android:text="ACBC Media Team Contacts"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-        </ListView>
-        <Space
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".5" />
+            android:layout_gravity="center"
+            android:layout_marginEnd="5sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="100dp"
+            card_view:cardCornerRadius="4dp">
 
-        <TextView
-            android:id="@+id/contact1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="50dp"
-            android:padding="10dp"
-            android:text="1. Pu Hu - 678-776-3189"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="14sp" />
-        <TextView
-            android:id="@+id/contact2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="85dp"
-            android:padding="10dp"
-            android:text="2. Luaite- 678-345-3119"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="14sp" />
-        <TextView
-            android:id="@+id/contact3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="115dp"
-            android:padding="10dp"
-            android:text="3. Salai Hute - 678-345-3119"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="14sp" />
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
 
-        <TextView
-            android:id="@+id/contact4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="145dp"
-            android:padding="10dp"
-            android:text="4. Dinga - 770-345-7119"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="14sp" />
 
-    </android.support.v7.widget.CardView>
+            <!--</RelativeLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="ACBC Media Team Contacts"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <!--<Space-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight=".5" />-->
+
+
+                <!--<ListView-->
+                    <!--android:id="@+id/listview_contacts"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--/>-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/contacts1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/contact1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="35dp"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:text="1. Pu Hu - 678-776-3189"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="14sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/contact2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="35dp"-->
+            <!--android:layout_marginTop="85dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:text="2. Luaite- 678-345-3119"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="14sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/contact3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="35dp"-->
+            <!--android:layout_marginTop="115dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:text="3. Salai Hute - 678-345-3119"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="14sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/contact4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="35dp"-->
+            <!--android:layout_marginTop="145dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:text="4. Dinga - 770-345-7119"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="14sp" />-->
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 </RelativeLayout>
