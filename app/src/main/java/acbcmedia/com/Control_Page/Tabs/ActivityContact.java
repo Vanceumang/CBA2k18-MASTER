@@ -28,10 +28,11 @@ public class ActivityContact extends AppCompatActivity {
     private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation"};
 
     private static final String TAG = "ActivityContact";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_pictures);
+        setContentView(R.layout.activity_locations_contacts);
 
         RecyclerView recyclerView = findViewById(R.id.contacts);
 
@@ -87,7 +88,7 @@ public class ActivityContact extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
 
-        new BottomNavigationIntents(this, bottomNavigationView,4);
+        new BottomNavigationIntents(this, bottomNavigationView, 4);
 
     }
 

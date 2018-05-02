@@ -34,10 +34,6 @@ public class ActivityLeaderships extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderships);
 
-//        Toolbar toolbar = findViewById(R.id.toolbar_main);
-//
-//        toolbar.setTitle("Leaderships");
-
         RecyclerView recyclerView = findViewById(R.id.recycler_card);
 
         RecyclerOptionsAdapter adapter = new RecyclerOptionsAdapter(this, speakerTop, speakerBottom, true);
