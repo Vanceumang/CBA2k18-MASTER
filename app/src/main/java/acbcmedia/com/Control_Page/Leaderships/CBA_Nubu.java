@@ -14,7 +14,7 @@ public class CBA_Nubu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cba__nubu);
+        setContentView(R.layout.activity_cba_nubu);
 
         ImageView button = (ImageView) findViewById(R.id.backButton);
         button.setOnClickListener(new View.OnClickListener() {

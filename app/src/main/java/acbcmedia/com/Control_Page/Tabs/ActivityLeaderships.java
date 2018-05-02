@@ -32,11 +32,11 @@ public class ActivityLeaderships extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_location_and_contacts);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_card);
 
-        RecyclerOptionsAdapter adapter = new RecyclerOptionsAdapter(this, speakerTop, speakerBottom);
+        RecyclerOptionsAdapter adapter = new RecyclerOptionsAdapter(this, speakerTop, speakerBottom, true);
 
         recyclerView.setAdapter(adapter);
 

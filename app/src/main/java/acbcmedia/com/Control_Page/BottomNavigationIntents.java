@@ -7,7 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import acbcmedia.com.Control_Page.Tabs.ActivityContacts;
+import acbcmedia.com.Control_Page.Tabs.ActivityContact;
 import acbcmedia.com.Control_Page.Tabs.ActivityLeaderships;
 import acbcmedia.com.Control_Page.Tabs.ActivityLocations;
 import acbcmedia.com.Control_Page.Tabs.ActivitySchedule;
@@ -82,10 +82,10 @@ public class BottomNavigationIntents {
                         break;
 
                     case R.id.ic_contacts:
-                        if (className.equalsIgnoreCase("ActivityContacts")) {
+                        if (className.equalsIgnoreCase("ActivityContact")) {
                             break;
                         }
-                        intent = new Intent(context, ActivityContacts.class);
+                        intent = new Intent(context, ActivityContact.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                         break;

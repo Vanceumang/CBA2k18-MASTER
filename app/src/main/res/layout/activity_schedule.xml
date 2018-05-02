@@ -33,24 +33,9 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/bottomBar"
-            android:layout_alignParentBottom="true">
-
-            <android.support.design.widget.BottomNavigationView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bottomNav_Bar"
-                app:menu="@menu/bottom_navigation_menu"
-                app:itemIconTint="@color/nav_item_colors"
-                app:itemTextColor="@color/nav_item_colors"
-                app:itemBackground="@color/colorPrimaryDark">
-            </android.support.design.widget.BottomNavigationView>
-
-        </RelativeLayout>
     </RelativeLayout>
+
+    <!--Include the bottom Nav-->
+    <include layout="@layout/menu_bottom_navigation" />
 
 </android.support.design.widget.CoordinatorLayout>
