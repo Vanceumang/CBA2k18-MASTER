@@ -32,7 +32,11 @@ public class ActivityLeaderships extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_location_and_contacts);
+        setContentView(R.layout.activity_leaderships);
+
+//        Toolbar toolbar = findViewById(R.id.toolbar_main);
+//
+//        toolbar.setTitle("Leaderships");
 
         RecyclerView recyclerView = findViewById(R.id.recycler_card);
 
