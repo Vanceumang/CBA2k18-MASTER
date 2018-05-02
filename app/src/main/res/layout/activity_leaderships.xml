@@ -15,18 +15,18 @@
             android:id="@+id/leadership_text"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Leaderships"
+            android:background="@color/topfirst"
             android:gravity="center"
+            android:text="Leaderships"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20dp"
-            android:background="@color/topfirst"/>
+            android:textSize="20dp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_card"
-            android:layout_below="@id/leadership_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/leadership_text"
             android:padding="16dp" />
     </RelativeLayout>
 

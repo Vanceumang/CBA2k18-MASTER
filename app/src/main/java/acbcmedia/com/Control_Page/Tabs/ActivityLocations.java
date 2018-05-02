@@ -32,9 +32,9 @@ public class ActivityLocations extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_pictures);
+        setContentView(R.layout.activity_locations_contacts);
 
-        TextView textView = findViewById(R.id.main);
+        TextView textView = findViewById(R.id.location_title);
 
         textView.setText("Locations");
 
@@ -44,7 +44,6 @@ public class ActivityLocations extends AppCompatActivity {
 
         recyclerView.setAdapter(recyclerOptionsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
 
         //        Use this instead of the previous listView listener
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerView, new RecyclerTouchListener.ClickListener() {
@@ -57,11 +56,12 @@ public class ActivityLocations extends AppCompatActivity {
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                         myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.exploregwinnett.org/chinbaptist"));
+                        myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.exploregwinnett.org/chinbaptist"));
                         startActivityForResult(myIntent, 1);
                         break;
                     case 2:
-                        myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.infiniteenergycenter.com/venues/detail/forum"));                        startActivityForResult(myIntent, 2);
+                        myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.infiniteenergycenter.com/venues/detail/forum"));
+                        startActivityForResult(myIntent, 2);
                         break;
                     case 3:
                         myIntent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY.parse("https://www.citypass.com/atlanta/things-to-do-atlanta"));
@@ -87,7 +87,7 @@ public class ActivityLocations extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
 
-        new BottomNavigationIntents(this, bottomNavigationView,3);
+        new BottomNavigationIntents(this, bottomNavigationView, 3);
 
 
     }
