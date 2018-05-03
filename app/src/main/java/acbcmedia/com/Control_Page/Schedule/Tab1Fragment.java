@@ -24,7 +24,7 @@ public class Tab1Fragment extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment1_layout, container, false);
+        View view = inflater.inflate(R.layout.fragment_schedule1, container, false);
 
 
         // Three buttons are call here

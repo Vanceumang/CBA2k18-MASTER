@@ -30,6 +30,12 @@ public class ActivityContact extends AppCompatActivity {
     private static final String TAG = "ActivityContact";
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_locations_contacts);
