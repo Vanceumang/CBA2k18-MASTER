@@ -9,18 +9,18 @@ import android.widget.ImageView;
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.Tabs.ActivityLeaderships;
 
-public class CBA_Guests extends AppCompatActivity {
+public class CBA_Culture extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cba_guests);
+        setContentView(R.layout.activity_cba_culture);
 
         ImageView button = (ImageView) findViewById(R.id.backButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CBA_Guests.this,ActivityLeaderships.class);
+                Intent intent = new Intent(CBA_Culture.this,ActivityLeaderships.class);
                 startActivity(intent);
             }
         });

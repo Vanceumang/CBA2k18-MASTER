@@ -32,9 +32,10 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="80dp"
-                android:text="CBANA Upa Hruaitu pawl"
+                android:text="Culture &amp; Literature"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
+
 
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -183,16 +184,19 @@
                         android:orientation="vertical"
                         android:layout_centerHorizontal="true">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/tinlal"/>
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/cerclebackgroundpurple"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_people_outline_black_24dp"
+                            android:layout_centerHorizontal="true"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="General Secrectary"
+                            android:text="Director"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
@@ -207,7 +211,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Rev. Sa Tin Lal"
+                            android:text="Rev. RunCung Mang"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -228,10 +232,13 @@
                         android:orientation="vertical"
                         android:layout_centerHorizontal="true">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/cikap"/>
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/cerclebackgroundpink"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_lightbulb_outline_black_24dp"
+                            android:layout_centerHorizontal="true"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -252,8 +259,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Rev. Dr Ci Lian Kap
-"
+                            android:text="Youth Ministry"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -286,10 +292,14 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/hremang"/>
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/cerclebackgroundgreen"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_control_point_black_24dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -309,7 +319,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Rev. Dr. Hre Mang"
+                            android:text="Women Ministry"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -330,10 +340,13 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/pastor_uk"/>
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/cerclebackgroundyello"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_wifi_black_24dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -354,12 +367,15 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Rev. Dr. Khaw Lian Uk"
+                            android:text="Sunday School"
                             android:textColor="@android:color/black" />
-                    </LinearLayout>
 
+                    </LinearLayout>
                 </android.support.v7.widget.CardView>
+
             </LinearLayout>
+
+
         </RelativeLayout>
 
     </RelativeLayout>
