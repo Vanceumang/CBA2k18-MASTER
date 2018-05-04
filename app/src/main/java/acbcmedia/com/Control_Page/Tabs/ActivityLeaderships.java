@@ -18,7 +18,6 @@ import acbcmedia.com.Control_Page.Leaderships.CBA_Mission;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Officers;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Women;
 import acbcmedia.com.Control_Page.Leaderships.CBA_Youth;
-
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
 import acbcmedia.com.Control_Page.RecyclerTouchListener;
@@ -66,15 +65,15 @@ public class ActivityLeaderships extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Officers.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Minister.class);
                         startActivity(intent);
                         break;
                     case 4:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Minister.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Mission.class);
                         startActivity(intent);
                         break;
                     case 5:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Minister.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Officers.class);
                         startActivity(intent);
                         break;
                     case 6:
@@ -100,14 +99,6 @@ public class ActivityLeaderships extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
         new BottomNavigationIntents(this, bottomNavigationView, 2);
 
-
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(0, 0);
     }
 
 
