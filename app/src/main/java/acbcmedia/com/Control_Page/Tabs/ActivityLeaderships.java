@@ -100,6 +100,14 @@ public class ActivityLeaderships extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
         new BottomNavigationIntents(this, bottomNavigationView, 2);
 
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, 0);
     }
 
 

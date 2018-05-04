@@ -21,7 +21,7 @@ import acbcmedia.com.Control_Page.SectionsPageAdapter;
  */
 
 public class ActivitySchedule extends AppCompatActivity {
-    private static final String TAG = "Activity3";
+    private static final String TAG = "ActivitySchedule";
 
     private SectionsPageAdapter mSectionsPageAdapter;
 
@@ -44,6 +44,12 @@ public class ActivitySchedule extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav_Bar);
 
         new BottomNavigationIntents(this, bottomNavigationView,1);
+    }
+
+
+    @Override public void finish() {
+        super.finish();
+        overridePendingTransition(0,0);
     }
 
 

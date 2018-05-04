@@ -28,6 +28,12 @@ public class ActivityLocations extends AppCompatActivity {
     //declaration of Items for the listView
     String names[] = new String[]{"Atlanta Chin Baptist Church", "Hotels Information", "Infinite Energy Forum", "Recommended Places to Visit"};
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, 0);
+    }
+
     //"Recommended Food Places", "Recommended Places to Visit", "Hotels Information", "Atlanta Chin Baptist Church", "Infinite Energy Forum"
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
