@@ -11,36 +11,36 @@ import android.widget.TextView;
 
 //This class is the adapter for the recyclerView
 public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptionsAdapter.ViewHolder> {
-    private String[] optionsList, speakerTop, speakerBottom, optionsTextBot;
+    private String[] contactNames, speakerTop, speakerBottom, contactEmails, contactPhones;
     private Context mContext;
     private Boolean isItSpeakers; //The adapter acts differently over for the speakers
     private String className;
     private static final String TAG = "RecyclerOptionsAdapter";
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView optionsTextView, optionsTextViewBot, speakerTopText, speakerBottomText;
+        private TextView firstTextView, secondTextView, thirdTextView;
         private LinearLayout parentLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             if (isItSpeakers) {
-                speakerTopText = itemView.findViewById(R.id.speakerTop);
-                speakerBottomText = itemView.findViewById(R.id.speakerBottom);
+                firstTextView = itemView.findViewById(R.id.speakerTop);
+                secondTextView = itemView.findViewById(R.id.speakerBottom);
             } else if (className.contains("Contacts")) {
-                optionsTextView = itemView.findViewById(R.id.options_contactview);
-                optionsTextViewBot = itemView.findViewById(R.id.options_contactview_lower);
+                firstTextView = itemView.findViewById(R.id.contact_name_text);
+                secondTextView = itemView.findViewById(R.id.contact_email_text);
+                thirdTextView = itemView.findViewById(R.id.contact_phone_text);
             } else {
-                optionsTextView = itemView.findViewById(R.id.options_textview);
+                firstTextView = itemView.findViewById(R.id.options_textview);
                 parentLayout = itemView.findViewById(R.id.recycler_linear);
-
             }
         }
     }
 
     public RecyclerOptionsAdapter(Context context, String[] options) {
         mContext = context;
-        this.optionsList = options;
+        this.contactNames = options;
         isItSpeakers = false;
         this.className = context.getClass().getSimpleName();
     }
@@ -53,10 +53,11 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
         this.className = context.getClass().getSimpleName();
     }
 
-    public RecyclerOptionsAdapter(Context context, String[] optionsList, String[] optionsTextViewBot) {
+    public RecyclerOptionsAdapter(Context context, String[] contactNames, String[] contactEmails, String[] contactPhones) {
         this.mContext = context;
-        this.optionsList = optionsList;
-        this.optionsTextBot = optionsTextViewBot;
+        this.contactNames = contactNames;
+        this.contactEmails = contactEmails;
+        this.contactPhones = contactPhones;
         isItSpeakers = false;
         this.className = context.getClass().getSimpleName();
     }
@@ -92,24 +93,27 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
             final String speakerTopText = speakerTop[position];
             final String speakerBotText = speakerBottom[position];
 
-            final TextView topTextView = holder.speakerTopText;
-            final TextView botTextView = holder.speakerBottomText;
+            final TextView topTextView = holder.firstTextView;
+            final TextView botTextView = holder.secondTextView;
 
             topTextView.setText(speakerTopText);
             botTextView.setText(speakerBotText);
         } else if (className.contains("Contacts")) {
 //        Get model data based on position
-            final String option = optionsList[position];
-            final String phone = optionsTextBot[position];
+            final String option = contactNames[position];
+            final String email = contactEmails[position];
+            final String phone = contactPhones[position];
 
-            final TextView textView = holder.optionsTextView;
-            final TextView botText = holder.optionsTextViewBot;
+            final TextView textView = holder.firstTextView;
+            final TextView secondTextView = holder.secondTextView;
+            final TextView thirdText = holder.thirdTextView;
             textView.setText(option);
-            botText.setText(phone);
+            secondTextView.setText(email);
+            thirdText.setText(phone);
         } else {
-            final String option = optionsList[position];
+            final String option = contactNames[position];
 
-            final TextView textView = holder.optionsTextView;
+            final TextView textView = holder.firstTextView;
             textView.setText(option);
         }
 
@@ -121,7 +125,7 @@ public class RecyclerOptionsAdapter extends RecyclerView.Adapter<RecyclerOptions
         if (isItSpeakers) {
             return speakerTop.length;
         } else {
-            return optionsList.length;
+            return contactNames.length;
         }
     }
 }

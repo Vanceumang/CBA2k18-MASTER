@@ -8,15 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import acbcmedia.com.Control_Page.BottomNavigationIntents;
 import acbcmedia.com.Control_Page.Contacts.ContactsACBC;
 import acbcmedia.com.Control_Page.Contacts.ContactsCatering;
 import acbcmedia.com.Control_Page.Contacts.ContactsCommunication;
-import acbcmedia.com.Control_Page.Contacts.ContactsHotels;
 import acbcmedia.com.Control_Page.Contacts.ContactsHospitality;
+import acbcmedia.com.Control_Page.Contacts.ContactsHotels;
 import acbcmedia.com.Control_Page.Contacts.ContactsTransportation;
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
@@ -35,6 +35,10 @@ public class ActivityContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_locations_contacts);
 
+        TextView textView = findViewById(R.id.location_title);
+
+        textView.setText("Contacts");
+
         RecyclerView recyclerView = findViewById(R.id.contacts);
 
         RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, items);
@@ -43,7 +47,6 @@ public class ActivityContact extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Log.d(TAG, "onCreate: " + this.getLocalClassName());
 
 //        Use this instead of the previous listView listener
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerView, new RecyclerTouchListener.ClickListener() {

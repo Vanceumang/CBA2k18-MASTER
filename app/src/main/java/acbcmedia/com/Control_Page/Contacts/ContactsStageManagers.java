@@ -34,11 +34,12 @@ public class ContactsStageManagers extends AppCompatActivity {
         textView.setText("Stage Managers");
 
         String names[] = new String[]{"1. Albert Hum", "2. Justin Thang", "3. Saya San No Thuan", "4. Siangte"};
+        String emails[] = new String[]{"@mail", "@mail", "@mail", "@mail"};
         String phones[] = new String[]{"678-776-3189","678-345-3119", "678-345-3119", "770-345-7119"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 
-        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, phones);
+        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, emails,phones);
 
         recyclerView.setAdapter(recyclerOptionsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

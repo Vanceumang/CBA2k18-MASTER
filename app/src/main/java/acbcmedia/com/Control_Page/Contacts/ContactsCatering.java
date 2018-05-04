@@ -35,11 +35,12 @@ public class ContactsCatering extends AppCompatActivity {
         textView.setTextSize(25);
 
         String names[] = new String[]{"Salai Thangte", "Salai Jesse Vum"};
+        String emails[] = new String[]{"@mail", "@mail"};
         String phones[] = new String[]{"678-776-3189","678-345-3119"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 
-        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, phones);
+        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names,emails, phones);
 
         recyclerView.setAdapter(recyclerOptionsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

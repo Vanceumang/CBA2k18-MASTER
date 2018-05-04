@@ -36,11 +36,12 @@ public class ContactsHotels extends AppCompatActivity {
 
 //        The names and phone numbers
         String names[] = new String[]{"Za Hleih Lyan (Hleihte)", " Mai Mary Aung"};
+        String emails[] = new String[]{"@mail", "@mail"};
         String phones[] = new String[]{"678-776-3189","678-345-3119"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 
-        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, phones);
+        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, emails, phones);
 
         recyclerView.setAdapter(recyclerOptionsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

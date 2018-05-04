@@ -34,12 +34,13 @@ public class ContactsTransportation extends AppCompatActivity {
         textView.setText("Transportation Team Contacts");
         textView.setTextSize(25);
 
-        String names[] = new String[]{"Van Ram Lawm (Lawmte)", "Mang Thawm"};
-        String phones[] = new String[]{"678-776-3189","678-345-3119"};
+        String names[] = new String[]{"Van Ram Lawm (Lawmte)", "Mang Thawm","Van Ram Lawm (Lawmte)", "Mang Thawm"};
+        String emails[] = new String[]{"@mail", "@mail","@mail", "@mail"};
+        String phones[] = new String[]{"678-776-3189","678-345-3119","678-776-3189","678-345-3119"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 
-        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, phones);
+        RecyclerOptionsAdapter recyclerOptionsAdapter = new RecyclerOptionsAdapter(this, names, emails, phones);
 
         recyclerView.setAdapter(recyclerOptionsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
