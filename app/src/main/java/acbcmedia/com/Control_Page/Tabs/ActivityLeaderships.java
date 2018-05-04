@@ -10,11 +10,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import acbcmedia.com.Control_Page.BottomNavigationIntents;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Ce;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Guests;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Mino;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Nubu;
-import acbcmedia.com.Control_Page.Leaderships.CBA_Upa;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Christian;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Culture;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Development;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Minister;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Mission;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Officers;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Women;
+import acbcmedia.com.Control_Page.Leaderships.CBA_Youth;
+
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
 import acbcmedia.com.Control_Page.RecyclerTouchListener;
@@ -50,23 +54,35 @@ public class ActivityLeaderships extends AppCompatActivity {
                 Intent intent;
                 switch (position) {
                     case 0:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Upa.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Christian.class);
                         startActivity(intent);
                         break;
                     case 1:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Mino.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Culture.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Nubu.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Development.class);
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Ce.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Officers.class);
                         startActivity(intent);
                         break;
                     case 4:
-                        intent = new Intent(ActivityLeaderships.this, CBA_Guests.class);
+                        intent = new Intent(ActivityLeaderships.this, CBA_Minister.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent = new Intent(ActivityLeaderships.this, CBA_Minister.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent = new Intent(ActivityLeaderships.this, CBA_Women.class);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        intent = new Intent(ActivityLeaderships.this, CBA_Youth.class);
                         startActivity(intent);
                         break;
                     default:

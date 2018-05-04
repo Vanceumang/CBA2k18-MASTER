@@ -18,6 +18,13 @@
             android:id="@+id/topBar"
             android:background="@color/topfirst">
 
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_marginTop="15dp"
+                android:layout_width="35sp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -25,7 +32,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="80dp"
-                android:text="Officers Council Continues"
+                android:text="Mission Department"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -47,7 +54,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="150dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/linearLayout"
                 android:layout_marginTop="170dp"
@@ -70,15 +77,19 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/sannothuan"/>
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/cerclebackgroundgreen"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_control_point_black_24dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Director Youth"
+                            android:text="Member"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
@@ -92,8 +103,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="0dp"
-                            android:text="Rev. Dr. San No Thuan"
+                            android:padding="5dp"
+                            android:text="Pu Van Lian Thawng"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -113,17 +124,20 @@
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/thangmoi"/>
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/cerclebackgroundyello"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_wifi_black_24dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Director Development"
-                            android:textSize="14dp"
+                            android:text="Vice President"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
@@ -138,7 +152,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Rev. Dr. Hre Mang"
+                            android:text="Pu duh Hlei Cung"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -148,7 +162,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="150dp"
                 android:clipToPadding="false"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -158,7 +172,7 @@
                 <android.support.v7.widget.CardView
                     android:id="@+id/Upa"
                     android:layout_width="150dp"
-                    android:layout_height="130dp"
+                    android:layout_height="150dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -170,28 +184,30 @@
                         android:layout_centerHorizontal="true">
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="75dp"
+                            android:layout_width="80dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/biakhleimang"/>
+                            android:src="@drawable/cikap"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Chairman MC"
+                            android:text="Director"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
+                            android:layout_margin="5dp"
                             android:background="@color/lightgray" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Rev. Dr. Biak Hlei Mang"
+                            android:padding="5dp"
+                            android:text="Rev. Dr. Ci Lian Kap"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -200,7 +216,7 @@
                 <android.support.v7.widget.CardView
                     android:id="@+id/Mino"
                     android:layout_width="150dp"
-                    android:layout_height="130dp"
+                    android:layout_height="150dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground">
@@ -212,32 +228,32 @@
                         android:orientation="vertical"
                         android:layout_centerHorizontal="true">
 
+
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="75dp"
+                            android:layout_width="80dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/cikap"/>
+                            android:src="@drawable/nunuk"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Director Mission"
+                            android:text="Chairman"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_margin="0dp"
+                            android:layout_margin="5dp"
                             android:background="@color/lightgray" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="2dp"
-                            android:text="Rev. Dr Ci Lian Kap
-"
+                            android:padding="5dp"
+                            android:text="Rev. Nun Uk"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -247,7 +263,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="150dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/linearLayout"
                 android:layout_marginTop="11dp"
@@ -270,15 +286,19 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/thangmoi"/>
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/cerclebackgroundgreen"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_control_point_black_24dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Director CED"
+                            android:text="Treasurer"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
@@ -292,8 +312,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="0dp"
-                            android:text="Rev. Thang Moi"
+                            android:padding="5dp"
+                            android:text="Pu Dar nei Cung"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -314,23 +334,24 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
+
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="80dp"
                             android:layout_height="75dp"
-                            android:src="@drawable/runcungmang"/>
+                            android:src="@drawable/lianuklyan2"/>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Director Literature"
-                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Member"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_margin="0dp"
+                            android:layout_margin="5dp"
                             android:background="@color/lightgray" />
 
                         <TextView
@@ -338,11 +359,12 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Rev. Run Cung Mang"
+                            android:text="Pu Lian Uk Lyan"
                             android:textColor="@android:color/black" />
-                    </LinearLayout>
 
+                    </LinearLayout>
                 </android.support.v7.widget.CardView>
+
             </LinearLayout>
         </RelativeLayout>
 
