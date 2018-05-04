@@ -24,7 +24,7 @@
             android:textSize="20dp" />
 
 
-        <android.support.v4.widget.NestedScrollView
+        <ScrollView
             android:id="@+id/nested_scroll_view_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -72,7 +72,7 @@
 
 
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </ScrollView>
 
     </LinearLayout>
 
