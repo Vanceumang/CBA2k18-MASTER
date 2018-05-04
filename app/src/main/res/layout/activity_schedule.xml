@@ -12,13 +12,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="?actionBarSize">
-
-        <TextView
-            android:id="@+id/schedule_title"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
-<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
             <android.support.v7.widget.Toolbar
@@ -46,47 +43,14 @@
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-=======
-            android:layout_height="50dp"
-            android:background="@color/topfirst"
-            android:gravity="center"
-            android:text="Schedule"
-            android:textAlignment="center"
-            android:textColor="@color/colorWhite"
-            android:textSize="20dp" />
 
->>>>>>> xml
 
-        <!--<android.support.design.widget.AppBarLayout-->
-            <!--android:id="@+id/appbar"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/schedule_title"-->
-            <!--android:theme="@style/AppTheme.AppBarOverlay">-->
-
-            <!--<android.support.design.widget.TabLayout-->
-                <!--android:id="@+id/tabs"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--/>-->
-
-        <!--</android.support.design.widget.AppBarLayout>-->
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/schedule_title"
-            android:background="@color/topfirst"
-            app:tabTextColor="@color/colorGrey"
-            app:tabSelectedTextColor="@color/White"
-            app:tabMode="fixed"/>
+        </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tabs"
+            android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     </RelativeLayout>
