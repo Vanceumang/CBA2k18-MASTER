@@ -10,7 +10,7 @@ import android.widget.TextView;
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
 
-public class ContactsTransportation extends AppCompatActivity {
+public class ContactsCommunication extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class ContactsTransportation extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_main);
 
 //        Toolbar title
-        toolbar.setTitle("Transportation");
+        toolbar.setTitle("Communication");
 
 //        Set the toolbar as an actionbar that can contain menus
         setSupportActionBar(toolbar);
@@ -31,11 +31,11 @@ public class ContactsTransportation extends AppCompatActivity {
 //        Set the top textview
         TextView textView = findViewById(R.id.info_text);
 
-        textView.setText("Transportation Team Contacts");
+        textView.setText("Communication Team Contacts");
         textView.setTextSize(25);
 
-        String names[] = new String[]{"Van Ram Lawm (Lawmte)", "Mang Thawm"};
-        String phones[] = new String[]{"678-776-3189","678-345-3119"};
+        String names[] = new String[]{"Rev. Dr. Khaw Lian Uk", "Pu Jacob Lian"};
+        String phones[] = new String[]{"770-882-9630","678-481-7203"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 
@@ -45,5 +45,4 @@ public class ContactsTransportation extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
-
 }

@@ -31,10 +31,11 @@ public class ContactsCatering extends AppCompatActivity {
 //        Set the top textview
         TextView textView = findViewById(R.id.info_text);
 
-        textView.setText("Catering");
+        textView.setText("Catering Team Contacts");
+        textView.setTextSize(25);
 
-        String names[] = new String[]{"1. Albert Hum", "2. Justin Thang", "3. Saya San No Thuan", "4. Siangte"};
-        String phones[] = new String[]{"678-776-3189","678-345-3119", "678-345-3119", "770-345-7119"};
+        String names[] = new String[]{"Salai Thangte", "Salai Jesse Vum"};
+        String phones[] = new String[]{"678-776-3189","678-345-3119"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 

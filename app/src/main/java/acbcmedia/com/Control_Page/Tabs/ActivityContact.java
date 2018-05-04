@@ -14,8 +14,9 @@ import android.view.View;
 import acbcmedia.com.Control_Page.BottomNavigationIntents;
 import acbcmedia.com.Control_Page.Contacts.ContactsACBC;
 import acbcmedia.com.Control_Page.Contacts.ContactsCatering;
+import acbcmedia.com.Control_Page.Contacts.ContactsCommunication;
 import acbcmedia.com.Control_Page.Contacts.ContactsHotels;
-import acbcmedia.com.Control_Page.Contacts.ContactsStageManagers;
+import acbcmedia.com.Control_Page.Contacts.ContactsHospitality;
 import acbcmedia.com.Control_Page.Contacts.ContactsTransportation;
 import acbcmedia.com.Control_Page.R;
 import acbcmedia.com.Control_Page.RecyclerOptionsAdapter;
@@ -28,12 +29,6 @@ public class ActivityContact extends AppCompatActivity {
     private String items[] = new String[]{"ACBC Media", "Catering", "Communication", "Hotels", "Hospitality", "Transportation"};
 
     private static final String TAG = "ActivityContact";
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(0, 0);
-    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,17 +59,22 @@ public class ActivityContact extends AppCompatActivity {
                         myIntent = new Intent(view.getContext(), ContactsCatering.class);
                         startActivityForResult(myIntent, 1);
                         break;
-                    case 3:
-                        myIntent = new Intent(view.getContext(), ContactsHotels.class);
+                    case 2:
+                        myIntent = new Intent(view.getContext(), ContactsCommunication.class);
                         startActivityForResult(myIntent, 2);
                         break;
-                    case 4:
-                        myIntent = new Intent(view.getContext(), ContactsStageManagers.class);
+
+                    case 3:
+                        myIntent = new Intent(view.getContext(), ContactsHotels.class);
                         startActivityForResult(myIntent, 3);
+                        break;
+                    case 4:
+                        myIntent = new Intent(view.getContext(), ContactsHospitality.class);
+                        startActivityForResult(myIntent, 4);
                         break;
                     case 5:
                         myIntent = new Intent(view.getContext(), ContactsTransportation.class);
-                        startActivityForResult(myIntent, 4);
+                        startActivityForResult(myIntent, 5);
                         break;
                     default:
                         break;

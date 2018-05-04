@@ -32,9 +32,10 @@ public class ContactsACBC extends AppCompatActivity {
         TextView textView = findViewById(R.id.info_text);
 
         textView.setText("ACBC Media Team Contacts");
+        textView.setTextSize(25);
 
-        String names[] = new String[]{"1. Pu Hu", "2. Luaite", "3. Salai Hute", "4. Dinga"};
-        String phones[] = new String[]{"678-776-3189","678-345-3119", "678-345-3119", "770-345-7119"};
+        String names[] = new String[]{" THawng Hu Lian (Pu Hu)", "Joseph Lal Hu Luai (Luaite)"};
+        String phones[] = new String[]{"770-882-9630","678-481-7203"};
 
         RecyclerView recyclerView = findViewById(R.id.contact_lists);
 
