@@ -37,84 +37,17 @@
         <activity
             android:name=".Tabs.ActivityContact"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Schedule.SatDayService"
-            android:label="@string/title_activity_sat_day_service"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.SatLunchDinner"
-            android:label="@string/title_activity_sat_lunch_dinner"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.SatEvening"
-            android:label="@string/title_activity_sat_evening"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.SunDayService"
-            android:label="@string/title_activity_sun_day_service"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.SunLunchDinner"
-            android:label="@string/title_activity_sun_lunch_dinner"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.SunEvening"
-            android:label="@string/title_activity_sun_evening"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.FriDinner"
-            android:label="@string/title_activity_fri_dinner"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity
-            android:name=".Schedule.FriEvening"
-            android:label="@string/title_activity_fri_evening"
-            android:parentActivityName=".Tabs.ActivitySchedule"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="acbcmedia.com.Control_Page.Tabs.ActivitySchedule" />
-        </activity>
-        <activity android:name=".Leaderships.CBA_Upa" />
-        <activity android:name=".Leaderships.CBA_Mino" />
-        <activity android:name=".Leaderships.CBA_Nubu" />
-        <activity android:name=".Leaderships.CBA_Ce" />
-        <activity android:name=".Leaderships.CBA_Guests" />
-        <activity android:name=".Testing" />
+        <activity android:name=".Leaderships.CBA_Christian" />
+        <activity android:name=".Leaderships.CBA_Culture" />
+        <activity android:name=".Leaderships.CBA_Development" />
+        <activity android:name=".Leaderships.CBA_Minister" />
+        <activity android:name=".Leaderships.CBA_Mission" />
+        <activity android:name=".Leaderships.CBA_Women" />
+        <activity android:name=".Leaderships.CBA_Youth" />
+        <activity android:name=".Leaderships.CBA_Officers" />
+        <activity android:name=".Leaderships.CBA_Officers2" />
+
+
         <activity
             android:name=".Contacts.ContactsACBC"
             android:parentActivityName=".Tabs.ActivityContact" />
@@ -122,19 +55,17 @@
             android:name=".Contacts.ContactsCatering"
             android:parentActivityName=".Tabs.ActivityContact" />
         <activity
+            android:name=".Contacts.ContactsCommunication"
+            android:parentActivityName=".Tabs.ActivityContact" />
+        <activity
             android:name=".Contacts.ContactsHotels"
             android:parentActivityName=".Tabs.ActivityContact" />
         <activity
-            android:name=".Contacts.ContactsStageManagers"
+            android:name=".Contacts.ContactsHospitality"
             android:parentActivityName=".Tabs.ActivityContact" />
         <activity
             android:name=".Contacts.ContactsTransportation"
             android:parentActivityName=".Tabs.ActivityContact" />
-        <activity android:name=".Locations.Location1" />
-        <activity android:name=".Locations.Location2" />
-        <activity android:name=".Locations.Location3" />
-        <activity android:name=".Locations.Location4" />
-        <activity android:name=".Locations.Location5"></activity>
     </application>
 
 </manifest>
