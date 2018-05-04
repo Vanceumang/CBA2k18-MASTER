@@ -37,7 +37,7 @@
         android:layout_height="150dp"
         card_view:cardCornerRadius="5dp">
         <TextView
-            android:id="@+id/info_text"
+            android:id="@+id/contacts_team_info"
             android:text="Lunch - Infinite Energy Forum"
             android:layout_marginTop="10dp"
             android:textSize="18sp"

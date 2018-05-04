@@ -19,7 +19,7 @@
             card_view:cardCornerRadius="4dp">
 
             <TextView
-                android:id="@+id/info_text"
+                android:id="@+id/contacts_team_info"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
